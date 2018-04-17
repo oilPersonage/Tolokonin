@@ -1,64 +1,69 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const merge = require('webpack-merge');
-const html = require('./webpack/html');
-const devserver = require('./webpack/devserver');
-const sass = require('./webpack/sass');
-const css = require('./webpack/css');
-const extractCSS = require('./webpack/css.extract');
-const uglifyJS = require('./webpack/js.uglify');
-const images = require('./webpack/images');
-const fonts = require('./webpack/fonts');
-const reactJs = require('./webpack/React');
 
-const PATHS = {
-    source: path.join(__dirname, 'source'),
-    build: path.join(__dirname, 'build')
-};
 
-const common = merge([
-    {
-        entry: [
-            'webpack-dev-server/client?http://localhost:9000',
-            './source/js/index.js'
-        ],
-        output: {
-            path: PATHS.build,
-            filename: 'js/[name].js'
-        },
-        plugins: [
-            new HtmlWebpackPlugin({
-                filename: 'index.html',
-                chunks: ['index', 'common'],
-                template: PATHS.source + '/index.html'
-            }),
-            new webpack.HotModuleReplacementPlugin()
+module.exports = {
+  entry: './app/js/main.js',
+  output: {
+    path: path.resolve(__dirname, 'build'),
+    filename: 'main.js'
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "app"),
+    compress: true,
+    port: 9000,
+    hot: true
+  },
+  module: {
+    rules: [
+      {
+          test: /\.sass$/,
+          use: [{
+            loader: "style-loader" // creates style nodes from JS strings
+          }, {
+            loader: "css-loader" // translates CSS into CommonJS
+          }, {
+            loader: "sass-loader", // compiles Sass to CSS
+            options: {
+              includePaths: ["./app/sass/main.sass"]
+            }
+          }]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+        }
+      },
+      { test: /\.jpg$/, use: [ "file-loader" ] },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+        'file-loader'
         ]
-    },
-    html(),
-    reactJs(),
-    images(),
-    fonts()
-]);
-
-module.exports = function(env) {
-    if (env === 'production'){
-        return merge([
-            common,
-            extractCSS(),
-            uglifyJS()
-        ]);
-    }
-    if (env === 'development'){
-        return merge([
-            common,
-            devserver(),
-            sass(),
-            css()
-        ])
-    }
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['babel-preset-es2015']
+          }
+        }
+      },
+    ]
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: './app/index.html',
+    })
+  ]
 };
+
+
 
 
 
