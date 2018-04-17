@@ -1,47 +1,55 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: './app/js/main.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'main.js'
+    filename: 'main.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, "app"),
+    contentBase: path.join(__dirname, 'app'),
     compress: true,
     port: 9000,
-    hot: true
   },
   module: {
     rules: [
       {
-          test: /\.sass$/,
-          use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-          }, {
-            loader: "css-loader" // translates CSS into CommonJS
-          }, {
-            loader: "sass-loader", // compiles Sass to CSS
-            options: {
-              includePaths: ["./app/sass/main.sass"]
-            }
-          }]
+        test: /\.sass$/i,
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader', 'sass-loader'],
+        }),
       },
       {
         test: /\.(html)$/,
         use: {
           loader: 'html-loader',
-        }
+        },
       },
-      { test: /\.jpg$/, use: [ "file-loader" ] },
+      { test: /\.(png|jpg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img/',
+            },
+          },
+        ],
+      },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: [
-        'file-loader'
-        ]
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
+        },
+        ],
       },
       {
         test: /\.js$/,
@@ -49,28 +57,18 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-es2015']
-          }
-        }
+            presets: ['babel-preset-es2015'],
+          },
+        },
       },
-    ]
+    ],
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './app/index.html',
-    })
-  ]
+    }),
+    new ExtractTextPlugin('main.css'),
+  ],
 };
-
-
-
-
-
-
-
-
-
-
-
 
