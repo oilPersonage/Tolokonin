@@ -39,8 +39,65 @@
   </div>
   <div class="headerBody">
     <div class="container-fluid">
-      <div class="form">
-
+      <div class="formBox">
+        <div class="form">
+          <form>
+            <h4>Запись на консультацию</h4>
+            <div class="flexWrap">
+              <input class="inputForm" type="text" placeholder="Имя*">
+              <input class="inputForm" type="text" placeholder="Телефон*">
+              <input class="inputForm" type="text" placeholder="E-mail*">
+              <div class="accept">
+                <input type="checkbox" id="accept">
+                <Label for="accept">Я согласен(на) на обработку
+                  персональных данных</Label>
+              </div>
+            </div>
+            <select class="selectedSpec" value="default">
+              <option value="default">Выберите специалиста</option>
+              <option value="Андрей">Андрей</option>
+              <option value="Миша Фролов">Миша Фролов</option>
+              <option value="Гаврилов Петр Ефремович">Гаврилов Петр Ефремович</option>
+            </select>
+            <div class="flexWrap">
+              <div class="formInputBox">
+                <p>Способ получения консультации</p>
+                <select class="selectedSpec" value="default">
+                  <option value="default">Устно</option>
+                  <option value="Андрей">Массажно</option>
+                  <option value="Миша Фролов">Еще как-то</option>
+                </select>
+              </div>
+              <div class="formInputBox">
+                <p>Тип консультации</p>
+                <select class="selectedSpec" value="default">
+                  <option value="default">Не выбран</option>
+                  <option value="Андрей">Условная</option>
+                  <option value="Миша Фролов">Еще какая-то</option>
+                </select>
+             </div>
+            </div>
+            <div class="flexWrap noWrap">
+              <div class="formInputBox formInputBoxLong">
+                <p>Выберите дату и время</p>
+                <input id="date" type="date">
+                <input id="time" type="time">
+              </div>
+              <div class="formInputBox formInputBoxShort">
+                <p>Промокод</p>
+                <input type="text" placeholder="******">
+              </div>
+            </div>
+            <div class="flex formPrice">
+              <p>Стоимость</p>
+              <h4>5000 &#8381;</h4>
+            </div>
+            <div class="flex formButton">
+              <button type='submit' class="buttonForm">Оплатить</button>
+              <button type='submit' class="buttonForm">Записаться</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -56,7 +113,7 @@
         <p class="meditaionTextOne">Мощный инструмент налаживания внутрисемейных и социальных взаимоотношения.</p>
         <p>Во время этой медитации ваши отношения со вселенной , родителями и другими людьми перейдут на уровень
           безусловной любви. Что дарует вам оздоровление души и тела, а также избавление от обид. </p>
-        <button class="button mb1">Узнать подробнее</button class="button">
+        <button class="button mb1">Узнать подробнее</button>
       </div>
     </div>
   </div>
@@ -68,47 +125,49 @@
       <h2>Актуальные товары</h2>
       <div class="headTitleDop"><div class="lineTitle"></div></div>
     </div>
-    <div class="flex">
+    <div class="cardHead flex">
       <div class="cardBox">
         <div class="cardImage">
-          <img src="./images/1.jpg" alt="">
+          <img src="./images/medit.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
-        <p class="cardAuthor">Автор: Артём Толоконин</p>
-        <div class="priceBox">
-          <div class="price">
-            <p>800 <span>R</span></p>
+        <div class="cardTextBox">
+          <h5 class="cardTitle">Сборник медитаций</h5>
+          <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
+          <p class="cardAuthor"><span>Автор: </span> Артём Толоконин</p>
+          <div class="priceBox">
+            <h4 class="price">800 &#8381;</h4>
+            <button class="button buttonSmall">Купить</button class="button">
           </div>
-          <button class="button buttonSmall">Купить</button class="button">
         </div>
       </div>
       <div class="cardBox">
         <div class="cardImage">
-          <img src="./images/1.jpg" alt="">
+          <img src="./images/medit.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
-        <p class="cardAuthor">Автор: Артём Толоконин</p>
-        <div class="priceBox">
-          <div class="price">
-            <p>800 <span>R</span></p>
+        <div class="cardTextBox">
+          <h5 class="cardTitle">Запись семинара
+            "Как материализовать свои цели?"</h5>
+          <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
+          <p class="cardAuthor"><span>Автор: </span> Артём Толоконин</p>
+          <div class="priceBox">
+            <h4 class="price">800 &#8381;</h4>
+            <button class="button buttonSmall">Купить</button class="button">
           </div>
-          <button class="button buttonSmall">Купить</button class="button">
         </div>
       </div>
       <div class="cardBox">
         <div class="cardImage">
-          <img src="./images/1.jpg" alt="">
+          <img src="./images/medit.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
-        <p class="cardAuthor">Автор: Артём Толоконин</p>
-        <div class="priceBox">
-          <div class="price">
-            <p>800 <span>R</span></p>
+        <div class="cardTextBox">
+          <h5 class="cardTitle">Вебкурс
+            "Как построить отношения мечты?"</h5>
+          <p class="cardText">3 эффективные медитации , решающие самые наболевшие вопросы и…</p>
+          <p class="cardAuthor"><span>Автор: </span> Артём Толоконин</p>
+          <div class="priceBox">
+            <h4 class="price">800 &#8381;</h4>
+            <button class="button buttonSmall">Купить</button class="button">
           </div>
-          <button class="button buttonSmall">Купить</button class="button">
         </div>
       </div>
     </div>
@@ -122,7 +181,7 @@
       <h2>Наша миссия</h2>
       <div class="headTitleDop"><div class="lineTitle"></div></div>
     </div>
-    <div class="missionBox">
+    <div class="missionBox flex">
       <div class="missionMan">
         <img src="./images/man.png" alt="">
       </div>
@@ -130,11 +189,11 @@
         <p>Современный ритм жизни запрашивает от человека быть всегда в форме: активным, весёлым, здоровым, успешным.
           Однако всем известны состояния, когда нет сил, а жизнь кажется бессмысленной. Депрессия, трудности на работе,
           отсутствие взаимопонимания с близкими, плохое отношение к себе - со всеми этими состояниями не так просто
-          справиться самостоятельно. Ведь причины их далеко не всегда лежат на поверхности.<br>
-          Наша миссия - помогать Вам находить ключи к собственной жизни и счастью. Мы стремимся нести Вам информацию о
+          справиться самостоятельно. Ведь причины их далеко не всегда лежат на поверхности.</p>
+        <p>Наша миссия - помогать Вам находить ключи к собственной жизни и счастью. Мы стремимся нести Вам информацию о
           правильном, здоровом образе жизни и мыслей, чтобы росло количество гармоничных семей, так как именно семейное
-          благополучие является залогом позитивных изменений в обществе и мире!<br>
-          Наша цель - чтобы Ваша семья и лично Вы - были благополучны и счастливы!</p>
+          благополучие является залогом позитивных изменений в обществе и мире!</p>
+        <p>Наша цель - чтобы Ваша семья и лично Вы - были благополучны и счастливы!</p>
       </div>
     </div>
   </div>
@@ -146,61 +205,73 @@
       <h2>Наша команда</h2>
       <div class="headTitleDop"><div class="lineTitle"></div></div>
     </div>
-    <div class="flex">
+    <div class="cardHead flex">
       <div class="cardBox">
-        <div class="cardImage">
-          <img src="./images/team/1.jpg" alt="">
+        <div class="cardImageTeam">
+          <img src="./images/team/man.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">Психолог, психотерапевт, сексолог, кандидат медицинских наук, эксперт по сохранению семей от
-          развода, решению психологических проблем любой сложности, автор уникальных тренингов.</p>
+        <div class="cardTextBoxTeam">
+          <h4 class="cardTitle cardTitleTeam">Артём Толоконин</h4>
+          <p class="cardText">Психолог, психотерапевт, сексолог, кандидат медицинских наук, эксперт по сохранению семей от
+            развода, решению психологических проблем любой сложности, автор уникальных тренингов.</p>
+        </div>
       </div>
       <div class="cardBox">
-        <div class="cardImage">
-          <img src="./images/1.jpg" alt="">
+        <div class="cardImageTeam">
+          <img src="./images/team/woman.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">Психолог, психотерапевт, сексолог, кандидат медицинских наук, эксперт по сохранению семей от
-          развода, решению психологических проблем любой сложности, автор уникальных тренингов.</p>
+        <div class="cardTextBoxTeam">
+          <h4 class="cardTitle cardTitleTeam">Александра Толоконина</h4>
+          <p class="cardText">Руководитель центра Семейной Психологии Практикующий психолог, ведущая обучающих программ и мастер-классов для женщин.</p>
+        </div>
       </div>
       <div class="cardBox">
-        <div class="cardImage">
-          <img src="./images/1.jpg" alt="">
+        <div class="cardImageTeam">
+          <img src="./images/team/man2.jpg" alt="">
         </div>
-        <p class="cardTitle">Сборник медитаций</p>
-        <p class="cardText">Психолог, психотерапевт, сексолог, кандидат медицинских наук, эксперт по сохранению семей от
-          развода, решению психологических проблем любой сложности, автор уникальных тренингов.</p>
+        <div class="cardTextBoxTeam">
+          <h4 class="cardTitle cardTitleTeam">Александр Краснов</h4>
+          <p class="cardText">Семейный психолог, логотерапевт. Специализация: семейные отношения, вопросы личностного роста, лечение депрессий и психологических расстройств.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 <section>
   <div class="container-fluid">
-    <div class="bookBox">
+    <div class="bookBox flex">
       <div class="book">
         <img src="./images/book.png" alt="">
       </div>
       <div class="bookText">
-        <h3>Секреты успешных семей</h3>
+        <h1>Секреты успешных семей</h1>
         <p>Книга Артема Толоконина "Секреты успешных семей. Взгляд семейного психолога" - это настоящее руководство к
           действию, если Вы действительно хотите улучшить Ваши отношения с партнером и атмосферу в семье. Текст книги
           представляет собой органичный синтез размышлений автора, вопросов и ответов, дельных и действенных советов,
-          уникальных кейсов - реальных ситуаций из более чем 20-летней практики автора.<br>
-          Кроме этого, Вы встретите на страницах книги упоминания о художественных фильмах с описаниями сюжетов. Эти
-          киноистории помогут понять многое из того, что осталось "между строк" основного текста.<br>
-          Книга содержит практически полное описание авторской концепции Артема Толоконина - в концентрированном виде, в
-          легкой для восприятия форме.<br>
-          По отзывам читателей, книга "Секреты успешных семей" во многом изменила их взгляд на семейные отношения, на
-          семейную жизнь в целом - в ряде случаев за этим последовали реальные результаты!</p>
-        <p>Приобрести книгу можно в нашей клинике или одном из магазинов:</p>
-        <button class="button"></button class="button">
+          уникальных кейсов - реальных ситуаций из более чем 20-летней практики автора.</p>
+        <p>Кроме этого, Вы встретите на страницах книги упоминания о художественных фильмах с описаниями сюжетов. Эти
+          киноистории помогут понять многое из того, что осталось "между строк" основного текста.</p>
+        <p>Книга содержит практически полное описание авторской концепции Артема Толоконина - в концентрированном виде, в
+          легкой для восприятия форме.</p>
+        <p class="lastP">По отзывам читателей, книга "Секреты успешных семей" во многом изменила их взгляд на семейные отношения, на
+        семейную жизнь в целом - в ряде случаев за этим последовали реальные результаты!</p>
+        <h4>Приобрести книгу можно в нашей клинике или одном из магазинов:</h4>
+        <a href="#" class="bookLink"></a>
       </div>
     </div>
-    <div class="flex">
-      <div class="partner"></div>
-      <div class="partner"></div>
-      <div class="partner"></div>
-      <div class="partner"></div>
+    <div class="partnerBox flex">
+      <a href="#" class="partner">
+        <img src="./images/logo/2.png" alt="">
+      </a>
+      <a href="#" class="partner">
+        <img src="./images/logo/3.png" alt="">
+      </a>
+      <a href="#" class="partner">
+        <img src="./images/logo/4.png" alt="">
+      </a>
+      <a href="#" class="partner">
+        <img src="./images/logo/5.png" alt="">
+      </a>
     </div>
   </div>
 </section>
@@ -211,11 +282,11 @@
       <h2>Статьи</h2>
       <div class="headTitleDop"><div class="lineTitle"></div></div>
     </div>
-    <div class="flex">
+    <div class="flex articlesBox">
       <div class="articles">
-        <div class="articlesTitle">
-          <p>Как стать успешным психологом</p>
-          <p>15 февраля 2018</p>
+        <div class="articlesTitle flex">
+          <h5>Как стать успешным психологом</h5>
+          <p class="articlesDate">15 февраля 2018</p>
         </div>
         <div class="articlesBody">
           <div class="articlesText">
@@ -224,9 +295,9 @@
         </div>
       </div>
       <div class="articles">
-        <div class="articlesTitle">
-          <p>Как стать успешным психологом</p>
-          <p>15 февраля 2018</p>
+        <div class="articlesTitle flex">
+          <h5>Как стать успешным психологом</h5>
+          <p class="articlesDate">07 августа 2018</p>
         </div>
         <div class="articlesBody">
           <div class="articlesText">
@@ -238,27 +309,31 @@
     <button class="button buttonMiddle">Перейти к другим статьям</button class="button">
   </div>
 </section>
-</body>
-<footer>
-  <div class="container-fluid footer">
-    <div class="hideBlock">
-      <div class="flex">
-        <div class="hideSocialBox"></div>
-        <div class="hideSocialBox"></div>
-        <div class="hideSocialBox"></div>
-        <div class="hideSocialBox"></div>
+<section>
+  <div class="hideSection">
+    <div class="container-fluid footer">
+      <div class="hideBlock">
+        <div class="hideSocialBox flex">
+          <div class="hideSocialItem"></div>
+          <div class="hideSocialItem"></div>
+          <div class="hideSocialItem"></div>
+          <div class="hideSocialItem"></div>
+        </div>
       </div>
-    </div>
-    <button class="button" class="hidebutton class="button"">Скрыть</button class="button">
+      <button class="hideButton" class="hidebutton class="button"">Свернуть</button class="button">
+  </div>
+</section>
+<footer>
+  <div class="container-fluid">
     <div class="footer flex">
       <div>
-        <p>ЦЕНТР СЕМЕЙНОЙ ПСИХОЛОГИИ АРТЕМА ТОЛОКОНИНА</p>
+        <p class="nameOrg">ЦЕНТР СЕМЕЙНОЙ ПСИХОЛОГИИ<br> АРТЕМА ТОЛОКОНИНА</p>
         <p>ООО "Нео Вита"<br>
           ОГРН 1077758207317<br>
           мед. лицензия 77-01-002795,<br>
           от 18.10.2007</p>
       </div>
-      <div>
+      <div class="flex footerLinks">
         <a href="#">Консультации</a>
         <a href="#">Семинары и тренинги</a>
         <a href="#">Статьи</a>
@@ -267,18 +342,19 @@
       </div>
       <div>
         <div class="contacts">
-          <p class="phone">+7 (926) 021-10-20 </p>
-          <p class="adress">На базе клиники "Нео Вита"<br>г. Москва, ул. Крылатская, 45, к.1</p>
+          <h4 class="phone">+7 (926) 021-10-20 </h4>
+          <p>г. Москва, ул. Крылатская,<br>д. 45, к.1</p>
         </div>
-        <div class="flex">
-          <div class="soc">F</div>
-          <div class="soc">VK</div>
-          <div class="soc">OK</div>
-          <div class="soc">IN</div>
-          <div class="soc">YU</div>
+        <div class="flex socialIcon">
+          <a href="#" class="soc facebook"></a>
+          <a href="#" class="soc vk"></a>
+          <a href="#" class="soc ok"></a>
+          <a href="#" class="soc inst"></a>
+          <a href="#" class="soc youtube"></a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+</body>
 </html>
