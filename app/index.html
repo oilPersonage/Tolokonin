@@ -80,8 +80,13 @@
             <div class="flexWrap noWrap">
               <div class="formInputBox formInputBoxLong">
                 <p>Выберите дату и время</p>
-                <input id="date" type="date">
-                <input id="time" type="time">
+                <input type='text' class='datepicker-here' />
+                <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+                  <input type="text" class="form-control" value="13:14">
+                  <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+                  </span>
+                </div>
               </div>
               <div class="formInputBox formInputBoxShort">
                 <p>Промокод</p>
