@@ -1,22 +1,145 @@
-// Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media only screen and (max-width: 576px)
-  .contain-fluid
-    width: 100vw
-    padding: 0 15px
-// Medium devices (tablets, 768px and up)
-@media only screen and (max-width: 768px)
-  .contain-fluid
-    width: 100vw
-    padding: 0 15px
-// Large devices (desktops, 992px and up)
-@media only screen and (max-width: 992px)
-  .contain-fluid
-    max-width: 750px
 // Extra large devices (large desktops, 1200px and up)
 @media only screen and (max-width: 1200px)
-  .contain-fluid
+  .logoSearchBox
+    flex-direction: column
+    align-items: flex-start
+  .navSearch
+    justify-content: flex-start
+  .contacts
+    width: 100%
+  .container-fluid
     max-width: 970px
+    padding-left: 15px
+    padding-right: 15px
+  .cardBox
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+  .cardImage
+    width: 100%
+  .cardImageTeam
+    max-height: 332px
+    width: 100%
+  .bookText
+    p
+      font-size: 16px
+    h1
+      margin-bottom: 15px
+  .partner
+    margin-right: 15px
+    min-width: 200px
+    &:last-child
+      margin-right: 0
+  .articlesText
+    p
+      font-size:  16px
+  .hideSocialItem
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+
+// Large devices (desktops, 992px and up)
+@media only screen and (max-width: 992px)
+  .hamburgerBox
+    display: flex
+  .nav-box
+    flex-direction: column
+    position: absolute
+    display: none
+  //height: 0
+  .nav-item
+    text-align: center
+    padding: 0
+    width: 100vw
+    a
+      padding: 22px 0
+      display: inline-block
+      width: 100vw
+  .container-fluid
+    max-width: 750px
+    width: 100%
+  .formBox
+    justify-content: center
+  .partnerBox
+    flex-wrap: wrap
+  .hideBlock
+    height: auto
+  .hideSocialItem
+    height: 270px
+    margin: 15px
+    &:last-child
+      margin-right: 15px
+  .hideSocialBox
+    justify-content: center
+    flex-wrap: wrap
+  .footer
+    flex-direction: column
+  .footerLinks
+    margin-top: 30px
+//Large devices (desktops, 768px and up)
+@media only screen and (max-width: 768px)
+  header
+    height: auto
+  .headerNavBoxTop
+    height: auto
+  .headerBody
+    padding: 30px 0
+    background-position: 18% center
+  .container-fluid
+    width: 100%
+    padding: 0 15px
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    margin: 0 0 !important
+  .nav-container
+    margin: 0
+    padding: 0
+    background-color: $whiteColor
+    border-bottom: 1px solid $grayColor
+  .logoSearchBox
+    width: auto
+    margin-top: 20px
+  .search
+    height: 100%
+  .contacts
+    text-align: center
+    margin: 30px 0
+    width: auto
+  .navSearch
+    margin-top: 15px
+  .headerNavBoxTop
+    flex-direction: column
+    align-items: center
+    justify-content: center
+// Small devices (landscape phones, 615px and up)
+@media only screen and (max-width: 615px)
+  .form
+    height: 100%
+    width: 100%
+  .flexWrap
+    flex-wrap: nowrap
+    flex-direction: column
+    margin-bottom: 50px
+    .inputForm
+      max-width: 100%
+  .formInputBox
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+    .selectedSpec
+      width: 100%
+  .formInputBox
+    width: 100% !important
+  .formInputBox
+    input
+      width: 45%
+// Small devices (landscape phones, 576px and up)
+@media only screen and (max-width: 576px)
+  .clockpicker
+    input
+      margin-right: 0 !important
+
 
