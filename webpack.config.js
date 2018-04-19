@@ -17,6 +17,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader',
+      },
+      {
         test: /\.sass$/i,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
@@ -69,6 +73,11 @@ module.exports = {
       template: './app/index.html',
     }),
     new ExtractTextPlugin('main.css'),
+    new webpack.ProvidePlugin({
+      $: "jquery/dist/jquery.min.js",
+      jQuery: "jquery/dist/jquery.min.js",
+      "window.jQuery": "jquery/dist/jquery.min.js"
+    })
   ],
 };
 
