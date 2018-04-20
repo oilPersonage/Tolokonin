@@ -19,6 +19,7 @@ h2
   text-transform: uppercase
   line-height: 36px
   position: relative
+  z-index: -1
   bottom: -4px
 h3
   font-family: 'BloggerMedium'
@@ -40,6 +41,9 @@ p
   font-size: 18px
 body
   background: url('../images/left-bg.png') repeat-y left top, url('../images/right-bg.png') repeat-y right top, #efeeec
+.hidden
+  height: 100vh
+  overflow: hidden
 input, label
   font-family: "Blogger"
 input, select
@@ -79,6 +83,7 @@ header
   flex-direction: column
   margin-bottom: 90px
 .headerNavBoxTop
+  position: relative
   height: 150px
   justify-content: space-between
   align-items: center
@@ -234,6 +239,7 @@ header
   align-items: center
   position: relative
   height: 38px
+  z-index: -1
   width: 155px
   &:before, &:after
     content: ''
@@ -293,6 +299,7 @@ button
   height: 340px
   background-size: 100%
   margin-right: 80px
+  z-index: -1
 .meditationBox
   max-width: 570px
   width: 100%
@@ -304,6 +311,7 @@ button
   border-radius: 4px
   box-shadow: 0px 4px 10px rgba(0,0,0,.3)
   position: relative
+  z-index: -1
   justify-content: flex-end
   padding: 75px 105px 90px 0
 .missionMan
@@ -445,7 +453,12 @@ button
 
 .hideSection
   background-color: $pinkColor
-
+  position: relative
+  overflow: hidden
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
+.hideBox
   position: relative
 footer
   background-color: $almostBlack
@@ -455,6 +468,9 @@ footer
     padding-bottom: 0
 .footer
   justify-content: space-between
+  .contacts
+    .phone
+      color: #fff
 .hideBlock
   height: 300px
   padding-bottom: 90px
@@ -470,17 +486,24 @@ footer
   width: 100%
 .hideButton
   position: absolute
+  cursor: pointer
+  display: flex
+  align-items: center
+  justify-content: center
+
+  font-family: "Blogger"
   bottom: 0
   left: 50%
   transform: translateX(-50%)
   width: 90px
   height: 70px
-  background-color: transparent
   color: #fff
-  background: url('../images/arrow.png') no-repeat center 80%
+  background-color: $pinkColor
+  background-image:  url('../images/arrow.png')
+  background-repeat: no-repeat
+  background-position: center 80%
   padding-bottom: 15px
-  &:hover
-    background-color: transparent
+  border-radius: 4px 4px 0 0
 .nameOrg
   margin-bottom: 20px
   text-transform: uppercase
@@ -522,6 +545,8 @@ footer
   height: 50px
   cursor: pointer
   justify-content: flex-end
+  background-color: $whiteColor
+  z-index: 5
 .hamburger
   width: 40px
   margin-right: 30px
@@ -595,5 +620,8 @@ footer
   width: 100%
   background-color: $whiteColor
   border-bottom: 1px solid $grayColor
+
+.footerBlock
+  display: flex
 // Всегда внизу
 @import "media"
