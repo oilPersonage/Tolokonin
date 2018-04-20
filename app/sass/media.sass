@@ -39,16 +39,47 @@
     margin-right: 15px
     &:last-child
       margin-right: 0
+  .meditationImage
+    margin-right: 3em
+  .meditationBox
+    width: 50%
+    .button
+      width: 100%
+      margin-top: 1em
+    h2
+      margin: 0
+      margin-bottom: 1em
+      font-size: 30px
 
 // Large devices (desktops, 992px and up)
 @media only screen and (max-width: 992px)
+  header
+    min-height: auto
   .hamburgerBox
     display: flex
+  .nav-container
+    display: flex
+    flex-direction: column
+    overflow: hidden
+  .headerNav
+    flex: 1
+    display: flex
+    flex-direction: column
+  .headerNavBox
+    flex: 1
+    display: flex
+    flex-direction: column
+  .nav
+    flex: 1
+    display: flex
+    flex-direction: column
   .nav-box
     flex-direction: column
     position: absolute
-    display: none
-  //height: 0
+    z-index: 1
+    top: 50px
+    display: flex
+    background-color: $whiteColor
   .nav-item
     text-align: center
     padding: 0
@@ -58,7 +89,6 @@
       display: inline-block
       width: 100vw
   .container-fluid
-    max-width: 750px
     width: 100%
   .formBox
     justify-content: center
@@ -97,6 +127,8 @@
   .nav-container
     margin: 0
     padding: 0
+    position: fixed
+    top: 0
     background-color: $whiteColor
     border-bottom: 1px solid $grayColor
   .logoSearchBox
