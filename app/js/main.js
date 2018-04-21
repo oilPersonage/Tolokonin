@@ -72,18 +72,30 @@ window.onscroll = function () { // hide headLogo
 };
 
 // hideContent
-
-const hideButton = $('.hideButton');
-const hideContent = $('.hideSection');
-const hideHeight = $('.hideSection').height();
-hideButton.click(() => {
-  if (!hideContent.hasClass('hide')) {
-    hideContent.animate({ height: 0 }, 400);
-    hideContent.addClass('hide');
-    hideButton.html('Развернуть');
+const social = {
+  button: $('.hideButton'),
+  content: $('.hideSection'),
+  textOne: 'Показать',
+  textTwo: 'Свернуть',
+};
+const licence = {
+  button: $('.showDop'),
+  content: $('.hideLicence'),
+  textOne: 'Показать больше',
+  textTwo: 'Скрыть',
+};
+function hideContents({
+  button, content, textOne, textTwo,
+}) {
+  content.slideToggle('hideCont');
+  if (!content.hasClass('hide')) {
+    content.addClass('hide');
+    button.html(textOne);
   } else {
-    hideContent.animate({ height: hideHeight }, 400);
-    hideContent.removeClass('hide');
-    hideButton.html('Свернуть');
+    content.removeClass('hide');
+    button.html(textTwo);
   }
-});
+}
+$('.showDop').click(() => { hideContents(licence); });
+$('.hideButton').click(() => { hideContents(social); });
+
