@@ -5,66 +5,85 @@ import '../libs/jquery-clockpicker.min.css';
 import '../libs/jquery-clockpicker.min';
 import '../libs/datepicker.min.css';
 import '../libs/datepicker.min';
-import { TweenLite, TweenMax } from 'gsap'
-// import '../libs/CSSPlugin.min'
 
+// Date and Time pikers
 $('.clockpicker').clockpicker({
   placement: 'top',
   align: 'left',
 });
 $('.datepicker-here').datepicker();
 
-const header = $('header')
+// Navigation
 const hamb = $('.hamburgerBox');
-const heightLogoBox = $('.headerNavBoxTop').height();
-const iconHamb = $('.hamburger')
-const menu = $('.nav-box')
-const navContainer = $('.nav-container')
-header.css({marginTop: heightLogoBox + 50,})
-navContainer.css({height: heightLogoBox + 50})
-const complete = () => {
-  navContainer.toggleClass('active-hamburger')
-}
+const height = $('.headerNavBoxTop').height();
+
 hamb.click(() => {
-  console.log(!navContainer.hasClass('active-hamburger'))
-  if (heightLogoBox <= window.pageYOffset + 2) {
-    console.log(1)
-    if (!navContainer.hasClass('active-hamburger')) {
-      TweenMax.to(navContainer, 1, {height: '100vh'});
-      iconHamb.toggleClass('active-menu');
-      menu.css({display: 'flex'})
-      navContainer.toggleClass('active-hamburger');
-    } else {
-      TweenMax.to(navContainer, 1, {height: heightLogoBox + 50, onComplete: complete});
-      iconHamb.toggleClass('active-menu');
+  $('body').toggleClass('hidden');
+  if (Number(window.pageYOffset) < Number(height)) { // если высота navbara меньше скролла
+    $('.hamburger').toggleClass('active-menu');
+    $('.nav-container').toggleClass('active-hamburger');
+    $('.headerNavBoxTop').css({ position: 'relative' });
+    if ($('.nav-container').hasClass('active-hamburger')) {
+      $('.headerNavBoxTop').animate({ top: 0 }, 400);
+      $('.headerNavBox').animate({ top: 0 }, 400);
     }
-  } else {
-    if (!navContainer.hasClass('active-hamburger')) {
-      console.log("не эктив")
-      TweenMax.to(navContainer, 1, {height: '100vh', top: heightLogoBox -2})
-      iconHamb.toggleClass('active-menu');
-      menu.css({display: 'flex'})
-      navContainer.toggleClass('active-hamburger');
+    $('.nav-box').slideToggle('ease-in-out');
+  } else { // else false
+    $('.hamburger').toggleClass('active-menu');
+    if ($('.nav-container').hasClass('active-hamburger')) {
+      $('.headerNavBoxTop').animate({ top: -height }, 400);
+      $('.headerNavBox').animate({ top: 0 }, 400);
     } else {
-      console.log("эктив")
-      TweenMax.to(navContainer, 1, {height: heightLogoBox + 50, top: -heightLogoBox -2, onComplete: complete});
-      iconHamb.toggleClass('active-menu');
+      $('.headerNavBoxTop').css({
+        position: 'fixed',
+        left: 0,
+        right: 0,
+        zIndex: 999,
+        padding: '0 15px',
+      });
+      $('.headerNavBoxTop').animate({ top: 0 }, 400);
+      $('.headerNavBox').animate({ top: height + 1 }, 400);
     }
+    $('.nav-container').toggleClass('active-hamburger');
+    $('.nav-box').slideToggle('ease-in-out');
   }
 });
 
-const buttonHumb = $('.headerNavBox')
-window.onscroll = function () {
-  console.log(window.pageYOffset)
-  if (1 < window.pageYOffset) {
-    navContainer.css({ paddingBottom: 50 });
-    TweenMax.to(navContainer, .3, {top: -heightLogoBox -2})
-    TweenMax.to(header, .4, {marginTop: 140, ease:'Linear'})
+$('.nav-item').click(() => { // click nav-item in mobile
+  if (window.matchMedia('(max-width: 992px)').matches) {
+    $('body').toggleClass('hidden');
+    $('.hamburger').toggleClass('active-menu');
+    $('.nav-container').toggleClass('active-hamburger');
+    $('.nav-box').slideToggle('ease-in-out');
+  }
+});
+
+window.onscroll = function () { // hide headLogo
+  if (height <= window.pageYOffset + 2) {
+    $('.headerNavBox').addClass('fixedNav');
+    $('.nav-container').css({ paddingBottom: 50 });
+    $('.headerNavBoxTop').stop().animate({ top: -height }, 400);
+    $('.headerNavBoxTop').css({ position: 'relative' });
   } else {
-    TweenMax.to(header, .4, {marginTop: heightLogoBox + 45})
-    TweenMax.to(navContainer, .4, {top: 0})
-    buttonHumb.removeClass('fixedNav');
-    navContainer.css({ paddingBottom: 0 });
+    $('.headerNavBoxTop').stop().animate({ top: 0 }, 400);
+    $('.headerNavBox').removeClass('fixedNav');
+    $('.nav-container').css({ paddingBottom: 0 });
   }
 };
 
+// hideContent
+
+const hideButton = $('.hideButton');
+const hideContent = $('.hideSection');
+const hideHeight = $('.hideSection').height();
+hideButton.click(() => {
+  if (!hideContent.hasClass('hide')) {
+    hideContent.animate({ height: 0 }, 400);
+    hideContent.addClass('hide');
+    hideButton.html('Развернуть');
+  } else {
+    hideContent.animate({ height: hideHeight }, 400);
+    hideContent.removeClass('hide');
+    hideButton.html('Свернуть');
+  }
+});

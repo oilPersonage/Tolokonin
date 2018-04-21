@@ -2,6 +2,14 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media only screen and (max-width: 1200px)
+  .meditationImage
+    margin-right: 1em
+  .meditationBox
+    width: 50%
+    h2
+      font-size: 30px
+    .button
+      width: 100%
   .logoSearchBox
     flex-direction: column
     align-items: flex-start
@@ -39,47 +47,32 @@
     margin-right: 15px
     &:last-child
       margin-right: 0
-  .meditationImage
-    margin-right: 3em
-  .meditationBox
-    width: 50%
-    .button
-      width: 100%
-      margin-top: 1em
-    h2
-      margin: 0
-      margin-bottom: 1em
-      font-size: 30px
 
 // Large devices (desktops, 992px and up)
 @media only screen and (max-width: 992px)
+  .navSearch
+    margin-bottom: 30px
   header
-    min-height: auto
+    height: auto
+  .headerNavBoxTop
+    background-color: $whiteColor
+  .meditationImage
+    margin-right: 1em
+    width: 50%
+  .meditationBox
+    width: 50%
+    h2
+      font-size: 26px
+      margin-bottom: 1em
+    .button
+      width: 100%
+      margin-top: 1em
   .hamburgerBox
     display: flex
-  .nav-container
-    display: flex
-    flex-direction: column
-    overflow: hidden
-  .headerNav
-    flex: 1
-    display: flex
-    flex-direction: column
-  .headerNavBox
-    flex: 1
-    display: flex
-    flex-direction: column
-  .nav
-    flex: 1
-    display: flex
-    flex-direction: column
   .nav-box
     flex-direction: column
     position: absolute
-    z-index: 1
-    top: 50px
-    display: flex
-    background-color: $whiteColor
+    display: none
   .nav-item
     text-align: center
     padding: 0
@@ -89,7 +82,11 @@
       display: inline-block
       width: 100vw
   .container-fluid
+    max-width: 750px
     width: 100%
+  .nav-container
+    max-width: 100%
+    background-color: $whiteColor
   .formBox
     justify-content: center
   .partnerBox
@@ -104,14 +101,55 @@
   .hideSocialBox
     justify-content: center
     flex-wrap: wrap
-  .footer
+  .cardHead
+    flex-wrap: wrap
+  .cardBox
+    width: calc(50% - 15px)
+    margin: 0 0 30px
+  .missionBox
+    padding: 30px
+  .missionMan
+    img
+      width: 100%
+  .cardImageTeam
+    max-height: 100%
+    height: auto
+    img
+      width: 100%
+      height: auto
+  .bookBox
     flex-direction: column
+    align-items: center
+  .bookText
+    h1
+      text-align: center
+  .book
+    margin-bottom: 30px
+  .partnerBox
+    justify-content: space-around
+  .partner
+    margin: 0
+    margin-bottom: 30px
+  .articlesTitle
+    flex-direction: column
+    padding: 20px 20px 15px
+    h5
+      text-align: left
+      margin-bottom: 10px
+    p
+      font-size: 16px
+  .articlesText
+    width: 70%
+  .articlesText
+    padding-left: 15px
+  .footerBlock
+    justify-content: space-between
   .footerLinks
-    margin-top: 30px
+    display: none
 //Large devices (desktops, 768px and up)
 @media only screen and (max-width: 768px)
-  header
-    height: auto
+  body
+    background-size: 20%
   .headerNavBoxTop
     height: auto
   .headerBody
@@ -119,7 +157,7 @@
     background-position: 18% center
   .container-fluid
     width: 100%
-    padding: 0 15px
+    padding: 0 15px 60px
     -webkit-box-sizing: border-box
     -moz-box-sizing: border-box
     box-sizing: border-box
@@ -127,9 +165,6 @@
   .nav-container
     margin: 0
     padding: 0
-    position: fixed
-    top: 0
-    background-color: $whiteColor
     border-bottom: 1px solid $grayColor
   .logoSearchBox
     width: auto
@@ -138,7 +173,7 @@
     height: 100%
   .contacts
     text-align: center
-    margin: 30px 0
+    margin: 0 0 30px
     width: auto
   .navSearch
     margin-top: 15px
@@ -146,6 +181,55 @@
     flex-direction: column
     align-items: center
     justify-content: center
+  .meditationHead
+    flex-direction: column
+    align-items: center
+  .meditationImage
+    order: 1
+    margin-right: 0
+    position: relative
+    left: 40px
+    width: 100%
+  .meditationBox
+    width: 100%
+    h2
+      text-align: center
+      font-size: 26px
+      margin-bottom: 1em
+    .button
+      margin-top: 1em
+      margin-bottom: 2em
+      width: 50%
+      height: 40px
+      font-size: 20px
+  .headTitleDop
+    width: 60px
+  .button
+    width: 100%
+  .buttonSmall
+    width: 120px
+  .nav-item
+    margin-left: 0
+  .missionBox
+    flex-direction: column
+    align-items: flex-end
+  .missionText
+    width: 65%
+  .missionMan
+    bottom: 0
+    width: 35%
+  .cardImageTeam
+    max-height: 260px
+    overflow: hidden
+  .cardBoxTeam
+    flex-direction: column
+    display: flex
+  .socialIcon
+    justify-content: center
+  .hideBox
+    margin-top: 30px
+  .hideBlock
+    padding-bottom: 0
 // Small devices (landscape phones, 615px and up)
 @media only screen and (max-width: 615px)
   .form
@@ -168,10 +252,49 @@
   .formInputBox
     input
       width: 45%
+
 // Small devices (landscape phones, 576px and up)
 @media only screen and (max-width: 576px)
   .clockpicker
     input
       margin-right: 0 !important
-
-
+  .cardHead
+    justify-content: center
+  .cardBox
+    width: 100%
+  .meditationBox
+    p
+      text-align: center
+  .meditationImage
+    width: 90%
+    left: 5%
+  h2
+    text-align: center
+  .missionBox
+    padding-top: 0
+    align-items: flex-start
+  .missionText
+    width: 100%
+  .missionMan
+    top: -30px
+    position: relative
+    width: 200px
+    bottom: auto
+  .cardImageTeam
+    max-height: none
+  .articlesBox
+    flex-direction: column
+  .articles
+    width: 100%
+    margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+  .footer
+    flex-direction: column
+    align-items: center
+  .nameBox
+    text-align: center
+    margin-bottom: 30px
+  .articlesText
+    width: 50%
+    padding: 15px 30px 25px

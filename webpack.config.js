@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: './app/js/main.js',
@@ -24,7 +25,23 @@ module.exports = {
         test: /\.sass$/i,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
-          use: ['css-loader', 'sass-loader'],
+          use: [{
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version'],
+                }),
+              ],
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+          }],
         }),
       },
       {
@@ -71,13 +88,18 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './app/index.html',
+      filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/info.html',
+      filename: 'info.html'
     }),
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
-      $: "jquery/dist/jquery.min.js",
-      jQuery: "jquery/dist/jquery.min.js",
-      "window.jQuery": "jquery/dist/jquery.min.js"
-    })
+      $: 'jquery/dist/jquery.min.js',
+      jQuery: 'jquery/dist/jquery.min.js',
+      'window.jQuery': 'jquery/dist/jquery.min.js',
+    }),
   ],
 };
 
