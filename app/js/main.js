@@ -99,3 +99,41 @@ function hideContents({
 $('.showDop').click(() => { hideContents(licence); });
 $('.hideButton').click(() => { hideContents(social); });
 
+// width Seminar Card
+
+// const Box = $('.cardSeminar');
+const cardArr = $('.currentSeminar > .cardBox');
+const oldArr = $('.oldSeminar > .cardBox');
+
+function WidthCard(arr) {
+  if (arr.length === 1) {
+    arr[0].parentNode.style.justifyContent = 'center';
+    arr[0].style.maxWidth = 'calc(50% - 30px)';
+  } else if (arr.length < 3) {
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].style.maxWidth = 'calc(50% - 30px)';
+    }
+  }
+}
+WidthCard(cardArr);
+WidthCard(oldArr);
+
+// show oldSeminar
+function cloneElem() {
+  if ($('.showSeminar').hasClass('hide')) {
+    for (let i = 0; i <= 1; i++) {
+      $('.exampleClone').clone().appendTo('.oldSeminar');
+    }
+    $('.showSeminar').html('Скрыть');
+  } else {
+    const arr = $('.exampleClone');
+    for (let i = 0; i < arr.length - 1; i++) {
+      arr[i].parentNode.removeChild(arr[i]);
+      $('.showSeminar').html('Показать больше');
+    }
+  }
+  $('.showSeminar').toggleClass('hide');
+}
+$('.showSeminar').click(() => {
+  cloneElem();
+});

@@ -88,11 +88,15 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './app/index.html',
-      filename: 'index.html'
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './app/info.html',
-      filename: 'info.html'
+      filename: 'info.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/Seminars.html',
+      filename: 'Seminars.html',
     }),
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
