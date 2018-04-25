@@ -17,6 +17,10 @@ $('.datepicker-here').datepicker();
 const hamb = $('.hamburgerBox');
 const height = $('.headerNavBoxTop').height();
 
+// category
+const banner = $('.banner');
+const subsBox = $('.subsBox');
+
 hamb.click(() => {
   $('body').toggleClass('hidden');
   if (Number(window.pageYOffset) < Number(height)) { // если высота navbara меньше скролла
@@ -58,7 +62,27 @@ $('.nav-item').click(() => { // click nav-item in mobile
   }
 });
 
-window.onscroll = function () { // hide headLogo
+const scrollHeight = document.documentElement.offsetHeight;
+
+const heightBottom = $('.hideSection').height() + $('footer').height();
+
+window.onscroll = function () {
+  // category news
+  if (!window.matchMedia('(max-width: 992px)').matches) {
+    const h = scrollHeight - heightBottom - 190;
+    if (window.pageYOffset + subsBox.height() + 110 > (h)) {
+      subsBox.addClass('absoluteCategory');
+      subsBox.removeClass('fixedCategory');
+    } else if (window.pageYOffset > banner.offset().top + banner.height()) {
+      subsBox.removeClass('absoluteCategory');
+      subsBox.addClass('fixedCategory');
+    } else {
+      subsBox.removeClass('fixedCategory');
+    }
+  }
+
+  // mobile menu
+
   if (height <= window.pageYOffset + 2) {
     $('.headerNavBox').addClass('fixedNav');
     $('.nav-container').css({ paddingBottom: 50 });
@@ -137,3 +161,4 @@ function cloneElem() {
 $('.showSeminar').click(() => {
   cloneElem();
 });
+

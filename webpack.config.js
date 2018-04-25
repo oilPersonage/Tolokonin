@@ -98,6 +98,14 @@ module.exports = {
       template: './app/Seminars.html',
       filename: 'Seminars.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './app/Shop.html',
+      filename: 'Shop.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/News.html',
+      filename: 'News.html',
+    }),
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
       $: 'jquery/dist/jquery.min.js',

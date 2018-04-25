@@ -2,6 +2,8 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media only screen and (max-width: 1200px)
+  .bgi
+    background-size: 10%
   .meditationImage
     margin-right: 1em
   .meditationBox
@@ -53,6 +55,18 @@
   .cardSeminar
     .cardBox
       max-width: calc(50% - 30px)
+  .leftBox
+    width: calc(100% - 270px)
+  .rightNewBox
+    max-width: 240px
+  .textNewBox
+    width: 60%
+  .imageNewBox
+    display: inline-block
+    width: 40%
+    img
+      flex: none
+      width: 100%
 // Large devices (desktops, 992px and up)
 @media only screen and (max-width: 992px)
   .navSearch
@@ -158,6 +172,41 @@
       flex-direction: column
       button
         margin: 30px auto 0px
+  .notSeminar
+    .priceBox
+      flex-direction: row
+      button
+        margin: 0
+  .news
+    flex-direction: column
+  .leftBox
+    width: 100%
+    order: 1
+    margin-right: 0
+  .rightNewBox
+    max-width: 100%
+    order: -1
+    flex-direction: row
+    display: flex
+    flex-wrap: wrap
+  .subsBox
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+  .banner
+    display: none
+  .hashtag
+    width: 100%
+    order: -2
+  .textNewBox
+    width: 60%
+  .imageNewBox
+    display: inline-block
+    width: 40%
+    img
+      flex: none
+      width: 100%
 //Large devices (desktops, 768px and up)
 @media only screen and (max-width: 768px)
   body
@@ -273,6 +322,24 @@
       margin-top: 0
   .breadcrumbs
     padding-bottom: 0
+  .newBox
+    max-width: 600px
+    margin: 0 auto 30px
+    flex-direction: column
+    align-items: center
+  .imageNewBox
+    width: 100%
+    max-width: 100%
+    margin: 0 0 30px
+  .textNewBox
+    width: 100%
+  .index
+    .articles
+      width: 100%
+      margin-bottom: 30px
+      .articlesText
+        width: 50%
+        padding: 15px 30px 25px
 // Small devices (landscape phones, 615px and up)
 @media only screen and (max-width: 615px)
   .form

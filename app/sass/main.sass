@@ -6,7 +6,8 @@
   margin: 0
   padding: 0
   box-sizing: border-box
-
+a
+  font-family: 'Blogger'
 h1
   font-family: 'Blogger'
   font-size: 44px
@@ -39,8 +40,6 @@ h6
 p
   font-family: 'Blogger'
   font-size: 18px
-body
-  background: url('../images/left-bg.png') repeat-y left top 32%, url('../images/right-bg.png') repeat-y right top 32%, #efeeec
 .hidden
   height: 100vh
   overflow: hidden
@@ -667,6 +666,7 @@ footer
 .notPaddingBottom
   padding-bottom: 0
 .noIndexHeader
+  background-color: $whiteColor
   border-bottom: 1px solid $grayColor
 .breadcrumbs
   padding-bottom: 0
@@ -687,9 +687,12 @@ footer
     text-decoration: none
     padding: 5px 0px
     margin-right: 10px
-    color: $grayColor
+    color: #9ca29c
     &:hover
       border-bottom: 1px solid #132726
+.activeBread
+  a
+    color: $grayColor
 .activeNav
   a
     color: $grayColor
@@ -797,4 +800,135 @@ footer
   color: $darkColor
   margin-bottom: 25px
   text-align: center
+.subscription
+  margin-bottom: 70px
+  h3
+    text-align: center
+    margin-bottom: 30px
+
+.category
+  display: flex
+  flex-wrap: wrap
+  div
+    box-sizing: border-box
+    flex-basis: calc(50% - 20px)
+    margin-bottom: 10px
+    flex-grow: 1
+    a
+      text-decoration: none
+      color: $darkColor
+      font-size: 20px
+      font-weight: bold
+      &:hover
+        border-bottom: 1px solid $darkColor
+.subs
+  margin-bottom: 30px
+  h3
+    text-align: center
+    margin-bottom: 30px
+  input
+    width: 100%
+    margin-bottom: 20px
+    height: 30px
+    padding: 0 10px
+  button
+    width: 100%
+.hashtag
+  margin: 40px 0
+.tags
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin: 0 -10px
+  a
+    font-size: 18px
+    width: auto
+    justify-content: stretch
+    flex-grow: 1
+    border-radius: 4px
+    box-shadow: 0px 4px 10px rgba(0,0,0,.3)
+    padding: 5px 10px
+    margin: 0 10px
+    margin-bottom: 20px
+    text-align: center
+    color: #9ca29c
+    text-decoration: none
+    background-color: #fff
+    cursor: pointer
+    &:hover
+      box-shadow: none
+.banner
+  img
+    height: auto
+    width: 100%
+    margin-bottom: 15px
+  h4
+    margin-bottom: 10px
+  .priceBox
+    .price
+      align-items: flex-end
+      margin-bottom: 0
+// News
+.rightNewBox
+  max-width: 270px
+  width: 100%
+  position: relative
+  h4
+    text-align: center
+.textNewBox
+  justify-content: space-between
+  display: flex
+  flex-direction: column
+.leftBox
+  margin-right: 30px
+  width: calc(100% - 300px)
+.newBox
+  background-color: $whiteColor
+  margin-bottom: 90px
+  display: flex
+.imageNewBox
+  max-width: 370px
+  margin-right: 30px
+  width: 100%
+  display: flex
+  img
+    flex: 1
+.textNewBox
+  p
+    margin-bottom: 40px
+.dopTextNew
+  .date
+    margin-bottom: 20px
+    color: #9ca29c
+    font-size: 16px
+  .socialIcon
+    margin-top: 0
+    align-items: flex-end
+    .soc
+      height: 33px
+      width: 33px
+      background-image: url("../images/sprite-soc-news.png")
+      &:nth-child(1)
+        background-position: 0 0
+      &:nth-child(2)
+        background-position: -33px 0
+      &:nth-child(3)
+        background-position: -68px 0
+      &:nth-child(4)
+        background-position: -102px 0
+      &:hover
+        background-position-y: -34px
+.newCardPrice
+  justify-content: space-between
+.fixedCategory
+  position: fixed
+  top: 95px
+  width: 270px
+  z-index: 22
+.absoluteCategory
+  position: absolute
+  bottom: 60px
+.bgi
+  background: url('../images/left-bg.png') repeat-y left top 32%, url('../images/right-bg.png') repeat-y right top 32% $whiteColor
+  position: sticky
 @import "media"
