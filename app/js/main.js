@@ -66,18 +66,29 @@ const scrollHeight = document.documentElement.offsetHeight;
 
 const heightBottom = $('.hideSection').height() + $('footer').height();
 
+const widthSubs = subsBox.width();
+console.log(widthSubs);
+
 window.onscroll = function () {
   // category news
   if (!window.matchMedia('(max-width: 992px)').matches) {
     const h = scrollHeight - heightBottom - 190;
+    // console.log(window.pageYOffset + subsBox.height() + 110, h)
     if (window.pageYOffset + subsBox.height() + 110 > (h)) {
-      subsBox.addClass('absoluteCategory');
-      subsBox.removeClass('fixedCategory');
+      if (subsBox !== undefined) {
+        subsBox.addClass('absoluteCategory');
+        subsBox.css({ width: widthSubs });
+        subsBox.removeClass('fixedCategory');
+      }
     } else if (window.pageYOffset > banner.offset().top + banner.height()) {
-      subsBox.removeClass('absoluteCategory');
-      subsBox.addClass('fixedCategory');
+      if (subsBox !== undefined) {
+        subsBox.removeClass('absoluteCategory');
+        subsBox.addClass('fixedCategory');
+      }
     } else {
-      subsBox.removeClass('fixedCategory');
+      if (subsBox !== undefined) {
+          subsBox.removeClass('fixedCategory');
+      }
     }
   }
 
