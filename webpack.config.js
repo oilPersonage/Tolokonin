@@ -106,6 +106,14 @@ module.exports = {
       template: './app/News.html',
       filename: 'News.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './app/Consultation.html',
+      filename: 'Consultation.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/consultations.html',
+      filename: 'consultations.html',
+    }),
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({
       $: 'jquery/dist/jquery.min.js',

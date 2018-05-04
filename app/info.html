@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Title</title>
 </head>
 <body>
@@ -35,9 +36,8 @@
             </div>
             <ul class="nav-box flex">
               <li class="nav-item"><a href="index.html">Главная</a></li>
-              <li class="nav-item activeNav"><a href="#">О центре</a></li>
-              <li class="nav-item"><a href="#">Сотрудничество</a></li>
-              <li class="nav-item"><a href="#">Консультации</a></li>
+              <li class="nav-item activeNav"><a href="info.html">О центре</a></li>
+              <li class="nav-item"><a href="Consultation.html">Консультации</a></li>
               <li class="nav-item"><a href="Seminars.html">Семинары и тренинги</a></li>
               <li class="nav-item"><a href="News.html">Статьи</a></li>
               <li class="nav-item"><a href="Shop.html">Магазины</a></li>
@@ -61,162 +61,164 @@
       </ul>
     </div>
   </section>
-  <section class="infoBody">
-    <div class="container-fluid notPaddingBottom">
+  <div class="bgi">
+    <section class="infoBody">
+      <div class="container-fluid notPaddingBottom">
+        <div class="headTitle flex">
+          <div class="headTitleDop"><div class="lineTitle"></div></div>
+          <h2>О центре</h2>
+          <div class="headTitleDop"><div class="lineTitle"></div></div>
+        </div>
+        <div class="infoText">
+          <p>
+            У всех бывают трудные времена: кризис в семье, на работе, конфликт с самим собой или в социуме. В такие периоды хочется не просто надежного плеча и участия друзей, а совета профессионала – опытного и понимающего психолога по семейным вопросам, который поможет докопаться до причин происходящего, разложить все по полочкам и найти выход. Ведь выход же есть всегда, мы же знаем!
+          </p>
+          <p>
+            Очень важно в кризисной ситуации именно выявить корни проблемы, мы же с вами понимаем, что ничего случайного в жизни нет. Главное – найти ответы на два извечных вопроса: «кто/что виноват(о)» и «что делать».
+          </p>
+        </div>
+      </div>
+      <div class="headerBody">
+        <div class="container-fluid">
+          <div class="formBox">
+            <div class="form formNotIndex">
+              <form>
+                <h4>Запись на консультацию</h4>
+                <div class="flexWrap">
+                  <input class="inputForm" type="text" placeholder="Имя*">
+                  <input class="inputForm" type="text" placeholder="Телефон*">
+                  <input class="inputForm" type="text" placeholder="E-mail*">
+                  <div class="accept">
+                    <input type="checkbox" id="accept">
+                    <Label for="accept">Я согласен(на) на обработку
+                      персональных данных</Label>
+                  </div>
+                </div>
+                <select class="selectedSpec" value="default">
+                  <option value="default">Выберите специалиста</option>
+                  <option value="Андрей">Андрей</option>
+                  <option value="Миша Фролов">Миша Фролов</option>
+                  <option value="Гаврилов Петр Ефремович">Гаврилов Петр Ефремович</option>
+                </select>
+                <div class="flexWrap">
+                  <div class="formInputBox">
+                    <p>Способ получения консультации</p>
+                    <select class="selectedSpec" value="default">
+                      <option value="default">Устно</option>
+                      <option value="Андрей">Массажно</option>
+                      <option value="Миша Фролов">Еще как-то</option>
+                    </select>
+                  </div>
+                  <div class="formInputBox">
+                    <p>Тип консультации</p>
+                    <select class="selectedSpec" value="default">
+                      <option value="default">Не выбран</option>
+                      <option value="Андрей">Условная</option>
+                      <option value="Миша Фролов">Еще какая-то</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flexWrap noWrap">
+                  <div class="formInputBox formInputBoxLong">
+                    <p>Выберите дату и время</p>
+                    <input type='text' class='datepicker-here' data-position='top left'/>
+                    <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
+                      <input type="text" class="form-control" value="13:14">
+                      <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-time"></span>
+                    </span>
+                    </div>
+                  </div>
+                  <div class="formInputBox formInputBoxShort">
+                    <p>Промокод</p>
+                    <input type="text" placeholder="******">
+                  </div>
+                </div>
+                <div class="flex formPrice">
+                  <p>Стоимость</p>
+                  <h4>5000 &#8381;</h4>
+                </div>
+                <div class="flex formButton">
+                  <button type='submit' class="buttonForm">Оплатить</button>
+                  <button type='submit' class="buttonForm">Записаться</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infodopText">
+        <div class="container-fluid pb0">
+          <p> Хоть мы и называемся центром семейной психологии, мы работаем в разных сферах, в том числе проводим консультации по развитию бизнеса, женские семинары, тренинги по развитию личности.
+          Однако мы глубоко убеждены, что истоки большинства проблем лежат в семье. Причем не только в вашей собственной, но и в семейных отношениях многих поколений ваших предков. Семейно-родовой сценарий, который может стать препятствием к созданию семьи или не давать создавать гармоничные семейные отношения, может формироваться веками, а может быть просто следствием отсутствия любви в родительской семье.
+          </p>
+          <p>
+          Разобраться в наслоении кармических и родовых долгов помогает авторская методика Артема Толоконина, известного семейного психолога, психотерапевта-сексолога. Вебкурс «Исцеление силы рода» поможет вам исправить ошибки предков, освободиться от чужого сценария и стать свободным в семейных отношениях, начать строить свою семью на основе взаимной искренней любви.
+          </p>
+          <p>
+          Семинары «Путь к себе настоящей» и «Раскрытие интуиции» - ваши шаги к более глубокому пониманию природы вещей и своего места в этом мире, раскрытие экстрасенсорных способностей, которые есть почти в каждом человеке, освобождению от оков штампов и условностей. Эти тренинги, скорее всего, станут началом вашей новой жизни – более наполненной смыслом и более счастливой.
+          </p>
+        </div>
+      </div>
+      <div class="bottomBodyInfo">
+        <div class="container-fluid notPaddingBottom">
+          <div class="bottomBodyInfoText">
+            <p>
+            Многие проблемы на физическом уровне поможет решить семинар «Исцеление любовью». «Любовь – основа и смысл всего» - на этом тезисе строится методика, применяемая специалистами центра медицинских психологических проблем Артема Толоконина.
+            </p>
+            <p>
+            «Истоки осознанного материнства» и «Секреты семейных отношений» - семинары, предназначенные и для тех, кто еще только собирается создать семью и завести детей, и для пар с большим стажем и накопившимся «вагоном проблем».
+            </p>
+            <p>
+            Вы можете прийти в центр семейных проблем в Москве с любыми вопросами, мы обязательно вам поможем – на групповом занятии или в индивидуальном порядке.
+            </p>
+            <p class="bottomBodyInfoDop">
+              Измените свою жизнь к лучшему с семейными психологами <br>
+              центра Артема Толоконина!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sectionLicence">
       <div class="headTitle flex">
         <div class="headTitleDop"><div class="lineTitle"></div></div>
         <h2>О центре</h2>
         <div class="headTitleDop"><div class="lineTitle"></div></div>
       </div>
-      <div class="infoText">
-        <p>
-          У всех бывают трудные времена: кризис в семье, на работе, конфликт с самим собой или в социуме. В такие периоды хочется не просто надежного плеча и участия друзей, а совета профессионала – опытного и понимающего психолога по семейным вопросам, который поможет докопаться до причин происходящего, разложить все по полочкам и найти выход. Ведь выход же есть всегда, мы же знаем!
-        </p>
-        <p>
-          Очень важно в кризисной ситуации именно выявить корни проблемы, мы же с вами понимаем, что ничего случайного в жизни нет. Главное – найти ответы на два извечных вопроса: «кто/что виноват(о)» и «что делать».
-        </p>
-      </div>
-    </div>
-    <div class="headerBody">
-      <div class="container-fluid">
-        <div class="formBox">
-          <div class="form formNotIndex">
-            <form>
-              <h4>Запись на консультацию</h4>
-              <div class="flexWrap">
-                <input class="inputForm" type="text" placeholder="Имя*">
-                <input class="inputForm" type="text" placeholder="Телефон*">
-                <input class="inputForm" type="text" placeholder="E-mail*">
-                <div class="accept">
-                  <input type="checkbox" id="accept">
-                  <Label for="accept">Я согласен(на) на обработку
-                    персональных данных</Label>
-                </div>
-              </div>
-              <select class="selectedSpec" value="default">
-                <option value="default">Выберите специалиста</option>
-                <option value="Андрей">Андрей</option>
-                <option value="Миша Фролов">Миша Фролов</option>
-                <option value="Гаврилов Петр Ефремович">Гаврилов Петр Ефремович</option>
-              </select>
-              <div class="flexWrap">
-                <div class="formInputBox">
-                  <p>Способ получения консультации</p>
-                  <select class="selectedSpec" value="default">
-                    <option value="default">Устно</option>
-                    <option value="Андрей">Массажно</option>
-                    <option value="Миша Фролов">Еще как-то</option>
-                  </select>
-                </div>
-                <div class="formInputBox">
-                  <p>Тип консультации</p>
-                  <select class="selectedSpec" value="default">
-                    <option value="default">Не выбран</option>
-                    <option value="Андрей">Условная</option>
-                    <option value="Миша Фролов">Еще какая-то</option>
-                  </select>
-                </div>
-              </div>
-              <div class="flexWrap noWrap">
-                <div class="formInputBox formInputBoxLong">
-                  <p>Выберите дату и время</p>
-                  <input type='text' class='datepicker-here' data-position='top left'/>
-                  <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
-                    <input type="text" class="form-control" value="13:14">
-                    <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-time"></span>
-                  </span>
-                  </div>
-                </div>
-                <div class="formInputBox formInputBoxShort">
-                  <p>Промокод</p>
-                  <input type="text" placeholder="******">
-                </div>
-              </div>
-              <div class="flex formPrice">
-                <p>Стоимость</p>
-                <h4>5000 &#8381;</h4>
-              </div>
-              <div class="flex formButton">
-                <button type='submit' class="buttonForm">Оплатить</button>
-                <button type='submit' class="buttonForm">Записаться</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="infodopText">
-      <div class="container-fluid pb0">
-        <p> Хоть мы и называемся центром семейной психологии, мы работаем в разных сферах, в том числе проводим консультации по развитию бизнеса, женские семинары, тренинги по развитию личности.
-        Однако мы глубоко убеждены, что истоки большинства проблем лежат в семье. Причем не только в вашей собственной, но и в семейных отношениях многих поколений ваших предков. Семейно-родовой сценарий, который может стать препятствием к созданию семьи или не давать создавать гармоничные семейные отношения, может формироваться веками, а может быть просто следствием отсутствия любви в родительской семье.
-        </p>
-        <p>
-        Разобраться в наслоении кармических и родовых долгов помогает авторская методика Артема Толоконина, известного семейного психолога, психотерапевта-сексолога. Вебкурс «Исцеление силы рода» поможет вам исправить ошибки предков, освободиться от чужого сценария и стать свободным в семейных отношениях, начать строить свою семью на основе взаимной искренней любви.
-        </p>
-        <p>
-        Семинары «Путь к себе настоящей» и «Раскрытие интуиции» - ваши шаги к более глубокому пониманию природы вещей и своего места в этом мире, раскрытие экстрасенсорных способностей, которые есть почти в каждом человеке, освобождению от оков штампов и условностей. Эти тренинги, скорее всего, станут началом вашей новой жизни – более наполненной смыслом и более счастливой.
-        </p>
-      </div>
-    </div>
-    <div class="bottomBodyInfo">
-      <div class="container-fluid notPaddingBottom">
-        <div class="bottomBodyInfoText">
-          <p>
-          Многие проблемы на физическом уровне поможет решить семинар «Исцеление любовью». «Любовь – основа и смысл всего» - на этом тезисе строится методика, применяемая специалистами центра медицинских психологических проблем Артема Толоконина.
-          </p>
-          <p>
-          «Истоки осознанного материнства» и «Секреты семейных отношений» - семинары, предназначенные и для тех, кто еще только собирается создать семью и завести детей, и для пар с большим стажем и накопившимся «вагоном проблем».
-          </p>
-          <p>
-          Вы можете прийти в центр семейных проблем в Москве с любыми вопросами, мы обязательно вам поможем – на групповом занятии или в индивидуальном порядке.
-          </p>
-          <p class="bottomBodyInfoDop">
-            Измените свою жизнь к лучшему с семейными психологами <br>
-            центра Артема Толоконина!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="sectionLicence">
-    <div class="headTitle flex">
-      <div class="headTitleDop"><div class="lineTitle"></div></div>
-      <h2>О центре</h2>
-      <div class="headTitleDop"><div class="lineTitle"></div></div>
-    </div>
-    <div class="licence">
-      <div class="container-fluid">
-        <div class="flex articlesBox">
-          <div class="articles flex articlesInfo">
-            <img src="./images/certificate.jpg" alt="">
-          </div>
-          <div class="articles flex articlesInfo">
-            <img src="./images/certificate.jpg" alt="">
-          </div>
-        </div>
-        <div class="hideLicence hide">
+      <div class="licence">
+        <div class="container-fluid">
           <div class="flex articlesBox">
             <div class="articles flex articlesInfo">
-              <img src="./images/patent.jpg" alt="">
+              <img src="./images/certificate.jpg" alt="">
             </div>
             <div class="articles flex articlesInfo">
-              <img src="./images/patent.jpg" alt="">
+              <img src="./images/certificate.jpg" alt="">
             </div>
           </div>
-          <div class="flex articlesBox mb0">
-            <div class="articles flex articlesInfo">
-              <img src="./images/certificate2.jpg" alt="">
+          <div class="hideLicence hide">
+            <div class="flex articlesBox">
+              <div class="articles flex articlesInfo">
+                <img src="./images/patent.jpg" alt="">
+              </div>
+              <div class="articles flex articlesInfo">
+                <img src="./images/patent.jpg" alt="">
+              </div>
             </div>
-            <div class="articles flex articlesInfo">
-              <img src="./images/certificate2.jpg" alt="">
+            <div class="flex articlesBox mb0">
+              <div class="articles flex articlesInfo">
+                <img src="./images/certificate2.jpg" alt="">
+              </div>
+              <div class="articles flex articlesInfo">
+                <img src="./images/certificate2.jpg" alt="">
+              </div>
             </div>
           </div>
         </div>
+        <div class="showDop">Показать больше</div>
       </div>
-      <div class="showDop">Показать больше</div>
-    </div>
-  </section>
+    </section>
+  </div>
   <section>
     <div class="hideBox">
       <div class="hideSection">
@@ -245,10 +247,10 @@
             от 18.10.2007</p>
         </div>
         <div class="flex footerLinks">
-          <a href="#">Консультации</a>
-          <a href="#">Семинары и тренинги</a>
-          <a href="#">Статьи</a>
-          <a href="#">Интернет магазин</a>
+          <a href="Consultation.html">Консультации</a>
+          <a href="Seminars.html">Семинары и тренинги</a>
+          <a href="News.html">Статьи</a>
+          <a href="Shop.html">Интернет магазин</a>
           <a href="#">Контакты</a>
         </div>
         <div>

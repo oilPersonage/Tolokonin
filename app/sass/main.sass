@@ -53,6 +53,8 @@ input, select
   margin-bottom: 40px
 .mb1
   margin-bottom: 10px
+.mb30
+  margin-bottom: 30px
 .nav-box
   background-color: $whiteColor
   list-style: none
@@ -425,7 +427,7 @@ button
   display: flex
   justify-content: space-between
 .price
-  margin-bottom: 0
+  margin-bottom: 0px
   font-family: "Blogger"
   display: flex
   justify-content: center
@@ -636,6 +638,8 @@ footer
   height: 100vh
   position: fixed
   z-index: 999
+  bottom: 0
+  top: 0
 .viewNav
   height: 100% !important
 .nav
@@ -648,7 +652,6 @@ footer
   position: fixed
   top: 0
   right: 0
-  z-index: 9999
   width: 100%
   background-color: $whiteColor
   border-bottom: 1px solid $grayColor
@@ -663,6 +666,8 @@ footer
   padding-bottom: 0
 .pb50
   padding-bottom: 50px
+.pb90
+  padding-bottom: 90px !important
 .notPaddingBottom
   padding-bottom: 0
 .noIndexHeader
@@ -674,7 +679,7 @@ footer
   margin-top: 0
 .breadCrumbsBox
   background-color: $whiteColor
-  margin-bottom: 60px
+  padding-bottom: 60px
 .breadBox
   background-color: #efeeec
   list-style: none
@@ -737,9 +742,9 @@ footer
     width: 100%
     height: 100%
 .sectionLicence
-  margin-bottom: 80px
+  padding-bottom: 80px
 .seminar
-  margin-bottom: 115px
+  padding-bottom: 115px
 .licence
   position: relative
   z-index: 0
@@ -747,6 +752,7 @@ footer
     padding-bottom: 160px
 .showDop
   position: absolute
+  text-decoration: none
   cursor: pointer
   display: flex
   align-items: center
@@ -777,7 +783,7 @@ footer
   transform: translateX(-50%)
   background-repeat: no-repeat
   background-position: center 80%
-  padding-bottom: 15px
+  margin-bottom: 50px
   border-radius: 4px 4px 0 0
   height: 90px
   font-size: 30px
@@ -931,4 +937,199 @@ footer
 .bgi
   background: url('../images/left-bg.png') repeat-y left top 32%, url('../images/right-bg.png') repeat-y right top 32% $whiteColor
   position: sticky
+.BGtop50
+  background: url('../images/left-bg.png') repeat-y left top 50%, url('../images/right-bg.png') repeat-y right top 50% $whiteColor
+
+// Consultation
+.consultationGraphic
+  margin-top: 50px
+  position: relative
+  background-image: url("../images/arrows.png")
+  background-repeat: no-repeat
+  background-position: 40% center
+.middleBox
+  height: 185px
+  flex-direction: column
+  img
+    width: 185px
+.consTop
+  text-align: center
+  background-color: #fff
+  padding: 48px 40px
+  height: 280px
+  width: 280px
+  border-radius: 50%
+  box-shadow: 0px 4px 10px rgba(0,0,0,.4)
+  position: absolute
+  top: 0
+  left: 0
+  h4
+    line-height: 1.3
+.consMiddle
+  flex: 1
+  padding: 0 75px 0 155px
+.middleOne
+  align-items: flex-end
+.middleTwo
+  align-items: center
+  margin-left: 30px
+.middleThree
+  align-items: flex-start
+.boxDopMiddle
+  flex-direction: column
+  align-items: center
+.consBoxDop
+  width: 320px
+  margin-bottom: 65px
+  position: relative
+  justify-content: flex-end
+.consBottomBox
+  flex-direction: column
+  position: relative
+  width: 320px
+  justify-content: flex-end
+  align-items: center
+  h4
+    text-align: center
+    position: absolute
+    bottom: -61px
+.consH4
+  line-height: 1.3
+  text-align: center
+.consBottom
+  height: 185px
+  width: 185px
+  &:first-child
+    position: absolute
+    bottom: 0
+    left: 0
+.consPrice
+  display: flex
+  justify-content: space-between
+.priceBoxCons, .priceBoxBody, .price
+  display: flex
+  flex-direction: column
+.priceBoxCons
+  background-color: #fff
+  overflow: hidden
+  box-shadow: 0px 4px 10px rgba(0,0,0,.4)
+  border-radius: 4px
+  max-width: calc(50% - 15px)
+  width: 100%
+  p
+    margin-bottom: 20px
+.priceBoxTitle
+  z-index: 1
+  text-align: center
+  padding: 30px 15px
+  background-color: $grayColor
+  position: relative
+  h3
+    text-transform: none
+    color: #fff
+    font-weight: normal
+.priceBoxBody
+  justify-content: flex-start
+  padding: 45px 30px 35px
+.priceBoxText
+  height: 180px
+.imagesPrice
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 30px
+  height: 60px
+  width: auto
+.priceCons
+  margin-bottom: 15px
+  align-items: flex-start
+  &:last-child
+    margin-bottom: 0
+.priceAuthors
+  color: $almostBlack
+.priceList
+  font-family: "Blogger"
+  width: 100%
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0
+.borderDashed
+  border-bottom: 1px dashed $darkColor
+  flex: 1
+.bold
+  font-weight: bold
+.dopPriceText
+  color: #9ca29c
+.accentColor
+  background-color: $accentColor
+.consForm
+  max-width: 970px
+  width: 100%
+  margin: 0 auto
+  background-color: transparent
+  padding: 0
+  height: auto
+  h1
+    margin-bottom: 50px
+    text-transform: none
+    text-align: center
+  .accept
+    max-width: 100%
+    label
+      display: flex
+      align-items: center
+  .flexWrap
+    .inputForm
+      max-width: 270px
+      &:first-child
+        max-width: 370px
+    .promoCons
+      width: 270px
+    .selectedSpec
+      width: 270px
+    .dopSelectedSpec
+      width: 370px
+  .selectedSpec
+    max-width: 570px
+    margin-bottom: 0
+  .consWrap
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 35px
+    .formInputBox
+      width: 370px
+      display: flex
+      flex-direction: column
+      div
+        display: flex
+        justify-content: space-between
+      input
+        width: 170px
+      .clockpicker
+        width: 170px
+        input
+          margin-right: 0
+  .formPrice
+    justify-content: space-between
+    .buttonForm
+      width: 270px
+      color: #fff
+      margin: 0
+      font-size: 20px
+      font-weight: bold
+      font-family: "Blogger"
+.finishPrice
+  width: 370px
+  padding: 10px 15px 7px
+  background-color: #fff
+  border: 1px solid $grayColor
+  border-radius: 4px
+  text-align: center
+.consBody
+  .infoText
+    p
+      margin-bottom: 25px
+
+
 @import "media"

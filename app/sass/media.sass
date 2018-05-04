@@ -4,6 +4,7 @@
 @media only screen and (max-width: 1200px)
   .bgi
     background-size: 10%
+    z-index: 99
   .meditationImage
     margin-right: 1em
   .meditationBox
@@ -207,6 +208,59 @@
     img
       flex: none
       width: 100%
+  // Consultation
+  .consPrice
+    flex-direction: column
+  .priceBoxCons
+    max-width: 100%
+    margin-bottom: 30px
+  .promoCons
+    width: calc(50% - 15px)
+  .consForm
+    .formInputBox
+      width: calc(50% - 15px)
+      .selectedSpec
+        width: 100%
+    .flexWrap
+      .inputForm
+        max-width: 50%
+        width: calc(50% - 15px)
+      .promoCons
+        width: 100%
+    .accept
+      width: calc(50% - 15px)
+      label
+        height: 40px
+    .consWrap
+      .selectedSpec
+        width: calc(50% - 15px)
+      .formInputBox
+        width: calc(50% - 15px)
+    .formPrice
+      flex-direction: column
+      align-items: center
+      .buttonForm
+        margin-bottom: 30px
+        height: 40px
+        width: calc(50% - 15px)
+  .finishPrice
+    width: calc(50% - 15px)
+    margin-bottom: 40px
+  .consTop
+    background-image: none
+  .consTop
+    left: 50%
+    transform: translateX(-50%)
+    width: 220px
+    height: 220px
+    padding: 35px 30px
+    h4
+      font-size: 20px
+  .consMiddle
+    flex-direction: row
+    width: 100%
+  .boxMiddleBottom
+    flex-direction: column
 //Large devices (desktops, 768px and up)
 @media only screen and (max-width: 768px)
   body
@@ -287,8 +341,7 @@
     display: flex
   .socialIcon
     justify-content: center
-  .hideBox
-    margin-top: 30px
+
   .hideBlock
     padding-bottom: 0
   .bottomBodyInfo
@@ -365,6 +418,22 @@
 
 // Small devices (landscape phones, 576px and up)
 @media only screen and (max-width: 576px)
+  .logotype
+    width: auto
+    padding: 0 15px
+    img
+      width: 100%
+  .book
+    img
+      width: 100%
+  .search
+    width: calc(100% - 30px)
+    margin: 0 auto
+  .nav-item
+    a
+      padding: 10px 0
+  .contacts
+    font-size: 18px
   .clockpicker
     input
       margin-right: 0 !important
@@ -410,3 +479,5 @@
     padding: 15px 30px 25px
   .bottomBodyInfo
     padding-top: 250px
+  .form
+    padding: 30px 10px

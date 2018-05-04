@@ -16,7 +16,7 @@ $('.datepicker-here').datepicker();
 // Navigation
 const hamb = $('.hamburgerBox');
 const height = $('.headerNavBoxTop').height();
-
+console.log(height)
 // category
 const banner = $('.banner');
 const subsBox = $('.subsBox');
@@ -35,7 +35,7 @@ hamb.click(() => {
   } else { // else false
     $('.hamburger').toggleClass('active-menu');
     if ($('.nav-container').hasClass('active-hamburger')) {
-      $('.headerNavBoxTop').animate({ top: -height }, 400);
+      $('.headerNavBoxTop').animate({ top: -height - 2 }, 400);
       $('.headerNavBox').animate({ top: 0 }, 400);
     } else {
       $('.headerNavBoxTop').css({
@@ -43,10 +43,9 @@ hamb.click(() => {
         left: 0,
         right: 0,
         zIndex: 999,
-        padding: '0 15px',
       });
       $('.headerNavBoxTop').animate({ top: 0 }, 400);
-      $('.headerNavBox').animate({ top: height + 1 }, 400);
+      $('.headerNavBox').animate({ top: height - 1 }, 400);
     }
     $('.nav-container').toggleClass('active-hamburger');
     $('.nav-box').slideToggle('ease-in-out');
@@ -72,7 +71,7 @@ window.onscroll = function () {
   // category news
   if (!window.matchMedia('(max-width: 992px)').matches) {
     if (subsBox.length !== 0) {
-      console.log(subsBox.length !== 0, subsBox.length)
+      console.log(subsBox.length !== 0, subsBox.length);
       const h = scrollHeight - heightBottom - 190;
       // console.log(window.pageYOffset + subsBox.height() + 110, h)
       if (window.pageYOffset + subsBox.height() + 110 > (h)) {
@@ -129,8 +128,14 @@ function hideContents({
     button.html(textTwo);
   }
 }
-$('.showDop').click(() => { hideContents(licence); });
-$('.hideButton').click(() => { hideContents(social); });
+$('.showDop').click((e) => {
+  e.preventDefault();
+  hideContents(licence);
+});
+$('.hideButton').click((e) => {
+  e.preventDefault();
+  hideContents(social);
+});
 
 // width Seminar Card
 
