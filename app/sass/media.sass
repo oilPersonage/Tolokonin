@@ -4,7 +4,7 @@
 @media only screen and (max-width: 1200px)
   .bgi
     background-size: 10%
-    z-index: 99
+    z-index: 11
   .meditationImage
     margin-right: 1em
   .meditationBox
@@ -68,6 +68,35 @@
     img
       flex: none
       width: 100%
+  .consultationGraphic
+    background-image: none
+  .consTop
+    left: 50%
+    transform: translateX(-50%)
+    width: 220px
+    height: 220px
+    padding: 35px 30px
+    h4
+      font-size: 20px
+  .consMiddle
+    margin-top: 300px
+    margin-bottom: 130px
+    padding: 0
+    flex-direction: row
+    justify-content: space-between
+    display: flex
+    width: 100%
+  .boxMiddleBottom
+    flex-direction: column
+  .consBottomBox
+    left: 50%
+    transform: translateX(-50%)
+  .middleBox
+    width: calc(33.3% - 15px)
+  .middleTwo
+    margin-left: 0
+  .middleOne
+    align-items: center
 // Large devices (desktops, 992px and up)
 @media only screen and (max-width: 992px)
   .navSearch
@@ -246,21 +275,6 @@
   .finishPrice
     width: calc(50% - 15px)
     margin-bottom: 40px
-  .consTop
-    background-image: none
-  .consTop
-    left: 50%
-    transform: translateX(-50%)
-    width: 220px
-    height: 220px
-    padding: 35px 30px
-    h4
-      font-size: 20px
-  .consMiddle
-    flex-direction: row
-    width: 100%
-  .boxMiddleBottom
-    flex-direction: column
 //Large devices (desktops, 768px and up)
 @media only screen and (max-width: 768px)
   body
@@ -393,6 +407,45 @@
       .articlesText
         width: 50%
         padding: 15px 30px 25px
+  .boxMiddleBottom
+    margin-bottom: 50px
+  .consForm
+    max-width: 600px
+    .flexWrap
+      flex-wrap: nowrap
+      flex-direction: column
+      .inputForm
+        max-width: 100%
+        width: 100%
+        &:first-child
+          max-width: 100%
+      .accept
+        width: 100%
+        label
+          height: 25px
+    .consWrap
+      flex-direction: column
+      .selectedSpec
+        max-width: 100%
+        margin-bottom: 30px
+        width: 100%
+      .formInputBox
+        width: 100%
+        max-width: 100%
+        .flex
+          input
+            width: calc(50% - 15px)
+          .clockpicker
+            width: calc(50% - 15px)
+            input
+              width: 100%
+    .flexWrap
+      .formInputBox
+        margin-bottom: 30px
+        width: 100%
+        max-width: 100%
+        .selectedSpec
+          max-width: 100%
 // Small devices (landscape phones, 615px and up)
 @media only screen and (max-width: 615px)
   .form
@@ -441,6 +494,7 @@
     justify-content: center
   .cardBox
     width: 100%
+    max-width: 100%
   .meditationBox
     p
       text-align: center
@@ -481,3 +535,13 @@
     padding-top: 250px
   .form
     padding: 30px 10px
+  .consultationGraphic
+    display: none
+  .finishPrice
+    max-width: 100%
+    width: 100%
+  .consForm
+    .formPrice
+      .buttonForm
+        max-width: 100%
+        width: 100%
