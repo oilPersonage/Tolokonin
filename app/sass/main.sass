@@ -1327,23 +1327,9 @@ footer
 .cardBoxTeam
   margin: 0 15px
 .buttonGoUp
-  z-index: 88
+  bottom: -100px
+  transition: bottom 0.3s ease
   position: fixed
-  bottom: 10%
-  right: 5%
-  display: flex
-  align-items: center
-  justify-content: center
-  font-family: "Blogger"
-  border-radius: 4px
-  width: 160px
-  height: 40px
-  background-color: #e0dbd2
-  color: $almostBlack
-  cursor: pointer
-  font-weight: bold
-  padding-top: 3px
-  padding-right: 10px
   &:after
     content: ""
     width: 13px
@@ -1362,6 +1348,23 @@ footer
 .seminar
   .pb50
     padding-bottom: 50px
-
+.showButtonToUp
+  z-index: 88
+  position: fixed
+  bottom: 10%
+  right: 5%
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: "Blogger"
+  border-radius: 4px
+  width: 160px
+  height: 40px
+  background-color: #e0dbd2
+  color: #465d57
+  cursor: pointer
+  font-weight: bold
+  padding-top: 3px
+  padding-right: 10px
 
 @import "media"

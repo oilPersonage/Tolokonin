@@ -16,7 +16,7 @@ $('.datepicker-here').datepicker();
 // Navigation
 const hamb = $('.hamburgerBox');
 const height = $('.headerNavBoxTop').height();
-console.log(height)
+console.log(height);
 // category
 const banner = $('.banner');
 const subsBox = $('.subsBox');
@@ -86,6 +86,15 @@ window.onscroll = function () {
       } else if (subsBox !== undefined) {
         subsBox.removeClass('fixedCategory');
       }
+    }
+
+
+    // button ScrollTop
+    const w = $(this);
+    if (w.scrollTop() > ($('.footer').offset().top - w.height()) || window.pageYOffset < 2000) {
+      $('.buttonGoUp').removeClass('showButtonToUp'); // если виден footer
+    } else {
+      $('.buttonGoUp').addClass('showButtonToUp');
     }
   }
 
@@ -174,5 +183,11 @@ function cloneElem() {
 }
 $('.showSeminar').click(() => {
   cloneElem();
+});
+
+// ScrollTop
+
+$('.buttonGoUp').click(() => {
+  $('html, body').stop().animate({ scrollTop: 0 }, 500);
 });
 
