@@ -1,275 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Title</title>
 </head>
 <body>
-  <div class="noIndexHeader">
+<div class="noIndexHeader">
     <div class="container-fluid nav-container">
-      <div class="headerNav">
-        <div class="headerNavBoxTop flex">
-          <div class="logoSearchBox flex">
-            <div class="logotype">
-              <img src="./images/logo.png" alt="">
-            </div>
-            <div class="navSearch">
-              <div class="search">
-                <input type="text">
-                <div class="iconSearch"></div>
-              </div>
-            </div>
-          </div>
-          <div class="contacts">
-            <h4><a class="phone" href="tel: 89260211020">+7 (926) 021-10-20 </a></h4>
-            <p class="adress">На базе клиники "Нео Вита"</p>
-            <p>г. Москва, ул. Крылатская, 45, к.1</p>
-          </div>
-        </div>
-        <div class="headerNavBox">
-          <nav class="nav">
-            <div class="hamburgerBox">
-              <div class="hamburger">
-                <div></div>
-              </div>
-            </div>
-            <ul class="nav-box flex">
-              <li class="nav-item"><a href="index.html">Главная</a></li>
-              <li class="nav-item activeNav"><a href="info.html">О центре</a></li>
-              <li class="nav-item"><a href="Consultation.html">Консультации</a></li>
-              <li class="nav-item"><a href="Seminars.html">Семинары и тренинги</a></li>
-              <li class="nav-item"><a href="News.html">Статьи</a></li>
-              <li class="nav-item"><a href="Shop.html">Магазины</a></li>
-              <li class="nav-item"><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="breadCrumbsBox">
-    <div class="breadcrumbs container-fluid">
-      <ul class="breadBox flex">
-        <li class="breadItem">
-          <a href="index.html">Главная</a>
-          <p class="breadArrow">&#10095</p>
-        </li>
-        <li class="breadItem activeBread" >
-          <a href="info.html">О центре</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-  <div class="bgi">
-    <section class="infoBody">
-      <div class="container-fluid notPaddingBottom">
-        <div class="headTitle flex">
-          <div class="headTitleDop"><div class="lineTitle"></div></div>
-          <h2>О центре</h2>
-          <div class="headTitleDop"><div class="lineTitle"></div></div>
-        </div>
-        <div class="infoText">
-          <p>
-            У всех бывают трудные времена: кризис в семье, на работе, конфликт с самим собой или в социуме. В такие периоды хочется не просто надежного плеча и участия друзей, а совета профессионала – опытного и понимающего психолога по семейным вопросам, который поможет докопаться до причин происходящего, разложить все по полочкам и найти выход. Ведь выход же есть всегда, мы же знаем!
-          </p>
-          <p>
-            Очень важно в кризисной ситуации именно выявить корни проблемы, мы же с вами понимаем, что ничего случайного в жизни нет. Главное – найти ответы на два извечных вопроса: «кто/что виноват(о)» и «что делать».
-          </p>
-        </div>
-      </div>
-      <div class="headerBody">
-        <div class="container-fluid">
-          <div class="formBox">
-            <div class="form formNotIndex">
-              <form>
-                <h4>Запись на консультацию</h4>
-                <div class="flexWrap">
-                  <input class="inputForm" type="text" placeholder="Имя*">
-                  <input class="inputForm" type="text" placeholder="Телефон*">
-                  <input class="inputForm" type="text" placeholder="E-mail*">
-                  <div class="accept">
-                    <input type="checkbox" id="accept">
-                    <Label for="accept">Я согласен(на) на обработку
-                      персональных данных</Label>
-                  </div>
-                </div>
-                <select class="selectedSpec" value="default">
-                  <option value="default">Выберите специалиста</option>
-                  <option value="Андрей">Андрей</option>
-                  <option value="Миша Фролов">Миша Фролов</option>
-                  <option value="Гаврилов Петр Ефремович">Гаврилов Петр Ефремович</option>
-                </select>
-                <div class="flexWrap">
-                  <div class="formInputBox">
-                    <p>Способ получения консультации</p>
-                    <select class="selectedSpec" value="default">
-                      <option value="default">Устно</option>
-                      <option value="Андрей">Массажно</option>
-                      <option value="Миша Фролов">Еще как-то</option>
-                    </select>
-                  </div>
-                  <div class="formInputBox">
-                    <p>Тип консультации</p>
-                    <select class="selectedSpec" value="default">
-                      <option value="default">Не выбран</option>
-                      <option value="Андрей">Условная</option>
-                      <option value="Миша Фролов">Еще какая-то</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="flexWrap noWrap">
-                  <div class="formInputBox formInputBoxLong">
-                    <p>Выберите дату и время</p>
-                    <input type='text' class='datepicker-here' data-position='top left'/>
-                    <div class="input-group clockpicker" data-placement="left" data-align="top" data-autoclose="true">
-                      <input type="text" class="form-control" value="13:14">
-                      <span class="input-group-addon">
-                      <span class="glyphicon glyphicon-time"></span>
-                    </span>
+        <div class="headerNav">
+            <div class="headerNavBoxTop flex">
+                <div class="logoSearchBox flex">
+                    <div class="logotype">
+                        <img src="./images/logo.png" alt="">
                     </div>
-                  </div>
-                  <div class="formInputBox formInputBoxShort">
-                    <p>Промокод</p>
-                    <input type="text" placeholder="******">
-                  </div>
+                    <div class="navSearch">
+                        <div class="search">
+                            <input type="text">
+                            <div class="iconSearch"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex formPrice">
-                  <p>Стоимость</p>
-                  <h4>5000 &#8381;</h4>
+                <div class="contacts">
+                    <h4><a class="phone" href="tel: 89260211020">+7 (926) 021-10-20 </a></h4>
+                    <p class="adress">На базе клиники "Нео Вита"</p>
+                    <p>г. Москва, ул. Крылатская, 45, к.1</p>
                 </div>
-                <div class="flex formButton">
-                  <button type='submit' class="buttonForm">Оплатить</button>
-                  <button type='submit' class="buttonForm">Записаться</button>
-                </div>
-              </form>
             </div>
-          </div>
+            <div class="headerNavBox">
+                <nav class="nav">
+                    <div class="hamburgerBox">
+                        <div class="hamburger">
+                            <div></div>
+                        </div>
+                    </div>
+                    <ul class="nav-box flex">
+                        <li class="nav-item"><a href="index.html">Главная</a></li>
+                        <li class="nav-item activeNav"><a href="info.html">О центре</a></li>
+                        <li class="nav-item"><a href="Consultation.html">Консультации</a></li>
+                        <li class="nav-item"><a href="Seminars.html">Семинары и тренинги</a></li>
+                        <li class="nav-item"><a href="News.html">Статьи</a></li>
+                        <li class="nav-item"><a href="Shop.html">Магазины</a></li>
+                        <li class="nav-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
-      <div class="infodopText">
-        <div class="container-fluid pb0">
-          <p> Хоть мы и называемся центром семейной психологии, мы работаем в разных сферах, в том числе проводим консультации по развитию бизнеса, женские семинары, тренинги по развитию личности.
-          Однако мы глубоко убеждены, что истоки большинства проблем лежат в семье. Причем не только в вашей собственной, но и в семейных отношениях многих поколений ваших предков. Семейно-родовой сценарий, который может стать препятствием к созданию семьи или не давать создавать гармоничные семейные отношения, может формироваться веками, а может быть просто следствием отсутствия любви в родительской семье.
-          </p>
-          <p>
-          Разобраться в наслоении кармических и родовых долгов помогает авторская методика Артема Толоконина, известного семейного психолога, психотерапевта-сексолога. Вебкурс «Исцеление силы рода» поможет вам исправить ошибки предков, освободиться от чужого сценария и стать свободным в семейных отношениях, начать строить свою семью на основе взаимной искренней любви.
-          </p>
-          <p>
-          Семинары «Путь к себе настоящей» и «Раскрытие интуиции» - ваши шаги к более глубокому пониманию природы вещей и своего места в этом мире, раскрытие экстрасенсорных способностей, которые есть почти в каждом человеке, освобождению от оков штампов и условностей. Эти тренинги, скорее всего, станут началом вашей новой жизни – более наполненной смыслом и более счастливой.
-          </p>
+    </div>
+</div>
+<section class="breadCrumbsBox">
+    <div class="breadcrumbs container-fluid">
+        <ul class="breadBox flex">
+            <li class="breadItem">
+                <a href="index.html">Главная</a>
+                <p class="breadArrow">&#10095</p>
+            </li>
+            <li class="breadItem activeBread">
+                <a href="info.html">Артем Толоконин</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<div class="bgi BGtop50">
+    <section class="infoBody">
+        <div class="container-fluid mb100">
+            <div class="headTitle flex">
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+                <h2>Артём Толоконин</h2>
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+            </div>
+            <div class="flex cardInfoBody">
+                <div class="cardBox cardBoxTeam">
+                    <div class="cardImageTeam">
+                        <img src="./images/team/man.jpg" alt="">
+                    </div>
+                    <div class="cardTextBoxTeam">
+                        <div class="cardTitleBox">
+                            <img src="./images/smartphone.png" alt="">
+                            <a href="tel: +7 (926) 021-10-20" class="cardTitle cardTitleTeam tel">+7 (926) 021-10-20</a>
+                        </div>
+                        <div class="priceConsultation">
+                            <p class="bold">Стоимость консультации:</p>
+                            <div class="priceList flex">
+                                <div class="priceListName">Индивидуальная</div>
+                                <div class="defice"></div>
+                                <div class="priceListPrice">50000 &#8381;</div>
+                            </div>
+                            <div class="priceList flex">
+                                <div class="priceListName">Для пары</div>
+                                <div class="defice"></div>
+                                <div class="priceListPrice">65000 &#8381;</div>
+                            </div>
+                            <p>Продолжительность консультации до 3 часов</p>
+                            <a href="#" class="button buttonMiddle buttonMiddleInfo">Записаться на консультацию</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoBodyText">
+                    <p>Психолог, психотерапевт, сексолог, специалист по психосоматике, автор уникальной методики,
+                        кандидат медицинских наук. Эксперт по решению психологических проблем любой сложности. Более 25
+                        лет занимается частной практикой. Журнал Forbes назвал его в числе самых успешных
+                        психотерапевтов в мире.
+                        Артем Толоконин, знаменитый семейный психолог, использует в своей практике авторскую методику, в
+                        основе которой лежит понимание, что вся наша жизнь основана на любви: к мужчине или женщине, к
+                        родителям и детям, к своему дому, к тому, чем мы занимаемся здесь и сейчас. Найти в себе
+                        источник этой любви – самое главное, что человек должен сделать для себя.
+                    <p>
+                        Автор уникальных тренингов, строящихся на работе на всех уровнях человеческой психики: сознания,
+                        подсознания и бессознательного. В ходе групповых тренингов в Центре психологической помощи Артем
+                        создает атмосферу, в которой люди открывают в себе экстрасенсорные способности и обретают
+                        возможность исцелять себя и менять свою жизнь к лучшему.
+                    </p>
+                    <p>
+                        Артем разработал и ведет курс для психологов, дающий возможность людям, уже работающим в
+                        профессии, выйти на качественно другой уровень.
+                    </p>
+                    <p>
+                        В числе клиентов Артема Толоконина видные политики, крупные бизнесмены, звезды шоу-бизнеса. К
+                        нему
+                        приходят с вопросами семейных отношений, проблем в бизнесе, психосоматическими недугами. Сотни
+                        семей
+                        благодарны ему за сохранение и восстановление атмосферы любви и взаимной поддержки.
+                    </p>
+                    <p>
+                        Уже 17 лет женат первым и единственным браком, отец четверых детей. Он организовал
+                        психологический центр на базе клиники Нео Вита, в котором проводит тренинги и его жена
+                        Александра.
+                    </p>
+                    <p>
+                        Какие бы проблемы у вас не возникли, какими неразрешимыми они не казались бы, приходите Центр
+                        семейной психологии Артема Толоконина. Записаться на тренинги в центр психологической помощи
+                        можно онлайн.
+                    </p>
+                    <p class="bold mt15 mb0">Мы ждем вас и обязательно поможем!</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="bottomBodyInfo">
-        <div class="container-fluid notPaddingBottom">
-          <div class="bottomBodyInfoText">
-            <p>
-            Многие проблемы на физическом уровне поможет решить семинар «Исцеление любовью». «Любовь – основа и смысл всего» - на этом тезисе строится методика, применяемая специалистами центра медицинских психологических проблем Артема Толоконина.
-            </p>
-            <p>
-            «Истоки осознанного материнства» и «Секреты семейных отношений» - семинары, предназначенные и для тех, кто еще только собирается создать семью и завести детей, и для пар с большим стажем и накопившимся «вагоном проблем».
-            </p>
-            <p>
-            Вы можете прийти в центр семейных проблем в Москве с любыми вопросами, мы обязательно вам поможем – на групповом занятии или в индивидуальном порядке.
-            </p>
-            <p class="bottomBodyInfoDop">
-              Измените свою жизнь к лучшему с семейными психологами <br>
-              центра Артема Толоконина!
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
+    <section class="infoBody">
+        <div class="container-fluid mb100">
+            <div class="headTitle flex mb50">
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+                <h2>Статьи</h2>
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+            </div>
+            <div class="infoLinkBox">
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Про отношения между мужчиной и женщиной</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Как стать успешным психологом?</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Отношение к ребенку в семье</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Как изменить семейный сценарий: семинар психолога для родителей</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Тренинг психолога с родителями</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Частный психолог Артем Толоконин: «Основная цель моей работы –
+                        сделать так, чтобы я человеку как можно скорее стал бы не нужен!»</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Консультация психолога: мифы и реальность</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Семейные отношения: как сохранить крепкий брак</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Про обиды</a>
+                </div>
+                <div class="infoLinkMiniBox">
+                    <div class="infoLinkCircle"></div>
+                    <a class="infoLink" href="#">Отношения в браке: когда семейный психолог – «третий нужный»</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section">
+        <div class="container-fluid mb100">
+            <div class="headTitle flex mb50">
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+                <h2>Видео</h2>
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+            </div>
+            <div class="infoVideo">
+                <iframe class="videoBlock" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                <iframe class="videoBlock" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                <iframe class="videoBlock" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                <iframe class="videoBlock" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container-fluid mb100">
+            <div class="headTitle flex mb50">
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+                <h2>Фото</h2>
+                <div class="headTitleDop">
+                    <div class="lineTitle"></div>
+                </div>
+            </div>
+            <div class="infoPhoto">
+                <a href="#" class="infoPhotoItem">
+                    <img src="./images/photo.jpg" alt="">
+                </a>
+                <a href="#" class="infoPhotoItem">
+                    <img src="./images/photo.jpg" alt="">
+                </a>
+                <a href="#" class="infoPhotoItem">
+                    <img src="./images/photo.jpg" alt="">
+                </a>
+                <a href="#" class="infoPhotoItem">
+                    <img src="./images/photo.jpg" alt="">
+                </a>
+                <a href="#" class="infoPhotoItem">
+                    <img src="./images/photo.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
     <section class="sectionLicence">
-      <div class="headTitle flex">
-        <div class="headTitleDop"><div class="lineTitle"></div></div>
-        <h2>О центре</h2>
-        <div class="headTitleDop"><div class="lineTitle"></div></div>
-      </div>
-      <div class="licence">
-        <div class="container-fluid">
-          <div class="flex articlesBox">
-            <div class="articles flex articlesInfo">
-              <img src="./images/certificate.jpg" alt="">
+        <div class="headTitle flex">
+            <div class="headTitleDop">
+                <div class="lineTitle"></div>
             </div>
-            <div class="articles flex articlesInfo">
-              <img src="./images/certificate.jpg" alt="">
+            <h2>Дипломы</h2>
+            <div class="headTitleDop">
+                <div class="lineTitle"></div>
             </div>
-          </div>
-          <div class="hideLicence hide">
-            <div class="flex articlesBox">
-              <div class="articles flex articlesInfo">
-                <img src="./images/patent.jpg" alt="">
-              </div>
-              <div class="articles flex articlesInfo">
-                <img src="./images/patent.jpg" alt="">
-              </div>
-            </div>
-            <div class="flex articlesBox mb0">
-              <div class="articles flex articlesInfo">
-                <img src="./images/certificate2.jpg" alt="">
-              </div>
-              <div class="articles flex articlesInfo">
-                <img src="./images/certificate2.jpg" alt="">
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="showDop">Показать больше</div>
-      </div>
+        <div class="licence">
+            <div class="container-fluid mb100">
+                <div class="flex articlesBox articlesBoxInfo">
+                    <div class="articles flex articlesInfo">
+                        <img src="./images/certificate.jpg" alt="">
+                    </div>
+                    <div class="articles flex articlesInfo">
+                        <img src="./images/certificate.jpg" alt="">
+                    </div>
+                    <div class="articles flex articlesInfo">
+                        <img src="./images/certificate.jpg" alt="">
+                    </div>
+                    <div class="articles flex articlesInfo">
+                        <img src="./images/certificate.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </div>
-  <section>
-    <div class="hideBox">
-      <div class="hideSection">
-        <div class="container-fluid footer">
-          <div class="hideBlock">
-            <div class="hideSocialBox flex">
-              <div class="hideSocialItem"></div>
-              <div class="hideSocialItem"></div>
-              <div class="hideSocialItem"></div>
-              <div class="hideSocialItem"></div>
+    <section class="sectionReviews">
+        <div class="headTitle flex">
+            <div class="headTitleDop">
+                <div class="lineTitle"></div>
             </div>
-          </div>
+            <h2>Отзывы</h2>
+            <div class="headTitleDop">
+                <div class="lineTitle"></div>
+            </div>
         </div>
-      </div>
-      <div class="hideButton">Свернуть</div>
+        <div class="container-fluid">
+            <div class="reviews">
+                <div class="reviewsItem">
+                    <div class="reviewsItemHead">
+                        <img class="reviewsImg" src="./images/siluet.png" alt="">
+                        <div class="dopReviews">
+                            <h4 class="reviewsTitle">Елена Кардашенко</h4>
+                            <div class="reviewsDate">13 апреля 2016, 00:47</div>
+                        </div>
+                    </div>
+                    <div class="reviewsItemBody">
+                        Благодарю Артема за беценный опыт и знания, которыми он поделился на программе. Настрой на
+                        состояние безусловной любви, практики наполнения любовью, очищения рода от негативных программ,
+                        влияющих на жизнь сейчас, чистка пространства. Особенно ценна практика диагностика своего
+                        текущего состояния по всем сферам жизни — дальнейшая коррекция через состояние любви. Практика
+                        групповой медитации по программированию (реализация своих целей) произвела сильный резонанс по
+                        своей интенсивности и мощности. Теперь все мои задуманные цели и мечты реализуются благодаря
+                        заряду любви.
+                    </div>
+                </div>
+                <div class="reviewsItem">
+                    <div class="reviewsItemHead">
+                        <img class="reviewsImg" src="./images/siluet.png" alt="">
+                        <div class="dopReviews">
+                            <h4 class="reviewsTitle">Лазова Ольга</h4>
+                            <div class="reviewsDate">13 апреля 2016, 00:47</div>
+                        </div>
+                    </div>
+                    <div class="reviewsItemBody">
+                        Очень благодарна за полезную и насыщенную новую информацию с конкретизацией и доступными
+                        объяснениями! Желаю Вам личных и семейных успехов! Процветания — Вашей науки в психологических и
+                        психотерапевтических исследованиях, с глубинными дальнейшими познаниями, открытиями.
+                        А также — поддержки в Ваших начинаниях личных и семейных, а также групп, успехов ВСЕМ!
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="showSeminar hide">Показать больше отзывов</a>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <form class="formInfo">
+                <h2>Оставить отзыв</h2>
+                <div class="flexWrap">
+                    <input class="inputForm" placeholder="Имя"/>
+                    <input class="inputForm" placeholder="E-mail"/>
+                </div>
+                <div class="codeEditor mb60">
+                    <input type="textarea" placeholder="Ваш отзыв">
+                </div>
+                <div class="validationBox flex">
+                    <p class="mb0"> Введите сумму: 4 + 4</p>
+                    <input type="text" class="inputValid">
+                </div>
+                <a href="#" class="button" type="submit">Оправить</a>
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="headTitle flex">
+                <div class="headTitleDop"><div class="lineTitle"></div></div>
+                <h2>Наша команда</h2>
+                <div class="headTitleDop"><div class="lineTitle"></div></div>
+            </div>
+            <div class="cardHead cardHeadInfo flex">
+                <div class="cardBox cardBoxTeam">
+                    <div class="cardImageTeam">
+                        <img src="./images/team/woman.jpg" alt="">
+                    </div>
+                    <div class="cardTextBoxTeam">
+                        <h4 class="cardTitle cardTitleTeam">Александра Толоконина</h4>
+                        <p class="cardText">Руководитель центра Семейной Психологии Практикующий психолог, ведущая обучающих программ и мастер-классов для женщин.</p>
+                    </div>
+                </div>
+                <div class="cardBox cardBoxTeam">
+                    <div class="cardImageTeam">
+                        <img src="./images/team/man2.jpg" alt="">
+                    </div>
+                    <div class="cardTextBoxTeam">
+                        <h4 class="cardTitle cardTitleTeam">Александр Краснов</h4>
+                        <p class="cardText">Семейный психолог, логотерапевт. Специализация: семейные отношения, вопросы личностного роста, лечение депрессий и психологических расстройств.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<section>
+    <div class="hideBox">
+        <div class="hideSection">
+            <div class="container-fluid footer">
+                <div class="hideBlock">
+                    <div class="hideSocialBox flex">
+                        <div class="hideSocialItem"></div>
+                        <div class="hideSocialItem"></div>
+                        <div class="hideSocialItem"></div>
+                        <div class="hideSocialItem"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hideButton">Свернуть</div>
     </div>
-  </section>
-  <footer>
+</section>
+<div class="buttonGoUp">
+    Наверх
+</div>
+<footer>
     <div class="container-fluid">
-      <div class="footer flex">
-        <div class="nameBox">
-          <p class="nameOrg">ЦЕНТР СЕМЕЙНОЙ ПСИХОЛОГИИ<br> АРТЕМА ТОЛОКОНИНА</p>
-          <p>ООО "Нео Вита"<br>
-            ОГРН 1077758207317<br>
-            мед. лицензия 77-01-002795,<br>
-            от 18.10.2007</p>
+        <div class="footer flex">
+            <div class="nameBox">
+                <p class="nameOrg">ЦЕНТР СЕМЕЙНОЙ ПСИХОЛОГИИ<br> АРТЕМА ТОЛОКОНИНА</p>
+                <p>ООО "Нео Вита"<br>
+                    ОГРН 1077758207317<br>
+                    мед. лицензия 77-01-002795,<br>
+                    от 18.10.2007</p>
+            </div>
+            <div class="flex footerLinks">
+                <a href="Consultation.html">Консультации</a>
+                <a href="Seminars.html">Семинары и тренинги</a>
+                <a href="News.html">Статьи</a>
+                <a href="Shop.html">Интернет магазин</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div>
+                <div class="contacts">
+                    <h4 class="phone">
+                        <a class="phone" href="tel: 89260211020">+7 (926) 021-10-20 </a>
+                    </h4>
+                    <p>г. Москва, ул. Крылатская,<br>д. 45, к.1</p>
+                </div>
+                <div class="flex socialIcon">
+                    <a href="#" class="soc facebook"></a>
+                    <a href="#" class="soc vk"></a>
+                    <a href="#" class="soc ok"></a>
+                    <a href="#" class="soc inst"></a>
+                    <a href="#" class="soc youtube"></a>
+                </div>
+            </div>
         </div>
-        <div class="flex footerLinks">
-          <a href="Consultation.html">Консультации</a>
-          <a href="Seminars.html">Семинары и тренинги</a>
-          <a href="News.html">Статьи</a>
-          <a href="Shop.html">Интернет магазин</a>
-          <a href="#">Контакты</a>
-        </div>
-        <div>
-          <div class="contacts">
-            <h4 class="phone">
-              <a class="phone" href="tel: 89260211020">+7 (926) 021-10-20 </a>
-            </h4>
-            <p>г. Москва, ул. Крылатская,<br>д. 45, к.1</p>
-          </div>
-          <div class="flex socialIcon">
-            <a href="#" class="soc facebook"></a>
-            <a href="#" class="soc vk"></a>
-            <a href="#" class="soc ok"></a>
-            <a href="#" class="soc inst"></a>
-            <a href="#" class="soc youtube"></a>
-          </div>
-        </div>
-      </div>
     </div>
-  </footer>
+</footer>
 </body>
 </html>
