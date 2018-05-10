@@ -107,6 +107,10 @@ module.exports = {
       filename: 'News.html',
     }),
     new HtmlWebpackPlugin({
+      template: './app/contact.html',
+      filename: 'contact.html',
+    }),
+    new HtmlWebpackPlugin({
       template: './app/Consultation.html',
       filename: 'Consultation.html',
     }),
