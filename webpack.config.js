@@ -95,28 +95,24 @@ module.exports = {
       filename: 'info.html',
     }),
     new HtmlWebpackPlugin({
-      template: './app/Seminars.html',
-      filename: 'Seminars.html',
+      template: './app/seminars.html',
+      filename: 'seminars.html',
     }),
     new HtmlWebpackPlugin({
-      template: './app/Shop.html',
-      filename: 'Shop.html',
+      template: './app/shop.html',
+      filename: 'shop.html',
     }),
     new HtmlWebpackPlugin({
-      template: './app/News.html',
-      filename: 'News.html',
+      template: './app/news.html',
+      filename: 'news.html',
     }),
     new HtmlWebpackPlugin({
       template: './app/contact.html',
       filename: 'contact.html',
     }),
     new HtmlWebpackPlugin({
-      template: './app/Consultation.html',
-      filename: 'Consultation.html',
-    }),
-    new HtmlWebpackPlugin({
-      template: './app/consultations.html',
-      filename: 'consultations.html',
+      template: './app/consultation.html',
+      filename: 'consultation.html',
     }),
     new ExtractTextPlugin('main.css'),
     new webpack.ProvidePlugin({

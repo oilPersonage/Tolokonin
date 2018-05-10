@@ -74,7 +74,7 @@ window.onscroll = function () {
       console.log(subsBox.length !== 0, subsBox.length);
       const h = scrollHeight - heightBottom - 190;
       // console.log(window.pageYOffset + subsBox.height() + 110, h)
-      if (window.pageYOffset + subsBox.height() + 110 > (h)) {
+      if (window.pageYOffset + subsBox.height() + 80 > (h)) {
         subsBox.addClass('absoluteCategory');
         subsBox.css({ width: widthSubs });
         subsBox.removeClass('fixedCategory');
